@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- HTML tag for at definere alt inde i dette tag som HTML kode -->
 <head>
+    <!-- Head tagget er til infomation som brugeren typisk ikke ser -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML tags</title>
+    <!-- title tagget er det som kommer til at stå i fanebladet af siden -->
 </head>
 <body>
+    <!-- body tagget er til det som brugeren kommer til at se -->
     <header>
-        <a href="tags.html">HTML intro</a>
-        <a href="index.html">CSS intro</a>
-        <a href="colors.html">CSS farver</a>
-        <a href="fonte.html">CSS tekst</a>
-        <a href="margins.html">CSS margener</a>
-        <a href="selectors.html">CSS selectors</a>
-        <a href="klasser.html">CSS klasser</a>
-        <a href="position.html">CSS positioning</a>
-        <a href="menuer.html">CSS menuer</a>
-        <a href="formularer.html">HTML formularer</a>
+        <!-- header er til at lave sidehoved -->
+        <nav>
+        <!-- nav tagget er til navigation af siden -->
+            <!-- a tagget er links href er hvilken side den går til -->
+            <a href="tags.html">HTML intro</a>
+            <a href="index.html">CSS intro</a>
+            <a href="colors.html">CSS farver</a>
+            <a href="fonte.html">CSS tekst</a>
+            <a href="margins.html">CSS margener</a>
+            <a href="selectors.html">CSS selectors</a>
+            <a href="klasser.html">CSS klasser</a>
+            <a href="position.html">CSS positioning</a>
+            <a href="menuer.html">CSS menuer</a>
+            <a href="formularer.html">HTML formularer</a>
+        </nav>
     </header>
 
     <main>
+        <!-- main er selve siden -->
         <section>
+            <!-- section er for at angive at detter en en section af siden med en eller flere artikler -->
             <article>
+                <!-- article er for at angive at dette er en artikel -->
                 <h1>HTML tags</h1>
-
+                <!-- h1 er til overskrifter -->
+                <!-- p er til brødtekst -->
                 <p>HTML kode består af tags - i næsten alle tilfælde et start tag og et slut-tag.</p>
                 <p>Start-tag og slut-tag er altid ens, bortset fra at slut-tags indeholder en skråstreg, som fortæller, at her slutter det område, som du startede med dit start-tag.</p>
                 <p>Teksten her er f.eks. placeret mellem et p-starttag og et p-sluttag. P står for paragraph og angiver, at dette er et tekstafsnit.</p>
                 <p>Nogle få tags har ikke et sluttag - f.eks. img-tagget, som man bruger til at indsætte billeder:</p>
                 <img src="img/indsaet-billede.jpg">
+                <!-- img er til at sætte billeder ind src er kilden af det billed -->
             </article>
             <article>
                 <h2>De grundlæggende tags</h2>
+                <!-- h2 er en undertitel -->
 
                 <ul>
+                    <!-- ul er en uorganiseret liste -->
+                    <!-- li er et punkt i en liste -->
                     <li>html - start- og sluttag - omslutter hele din HTML-kode</li>
                     <li>head - start- og sluttag - indeholder informationer om siden, som brugeren ikke får at se</li>
                     <li>body - start- og sluttag - alt det indhold, som brugeren ser</li>
@@ -64,7 +81,7 @@
                 <p>Header og footer går igen på alle sider og main indeholder de elementer, som er unikke på hver side.</p>
 
                 <p>Se eksempel på header og footer på <a href="https://www.vojensskøjteklub.dk/" target="_blank">Vojens Skøjteklubs hjemmeside</a>.</p>
-
+                <!-- target="_blank" sørger for at siden bliver åbnet i et nyt faneblad -->
                 <p>Main indeholder derudover section og article. En section kan indeholde flere articles og main kan indeholde flere sections.</p>
 
                 <p>Se eksempel på sections og articles på <a href="https://www.danfoss.com/da-dk/" target="_blank">Danfoss' hjemmeside</a>.</p>
