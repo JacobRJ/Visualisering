@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <title>CSS Menuer</title>
+</head>
+<body>
+    <header>
+        <a href="tags.html">HTML intro</a>
+        <a href="index.html">CSS intro</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <h1>CSS menuer</h1>
+        <section>
+            <article>
+                <p>
+                    Indtil videre har vi lavet en simpel menu i et niveau. I dag skal vi kigge på en dropdown menu lavet i CSS.
+                </p>
+                <p>
+                    For at kunne lave en CSS dropdown menu, skal vi have flyttet vores menulinjer over i en unordered list, som vi så styler til at opføre sig som en menu i stedet for at blive vist som en liste. Når vi gør det, er det fordi, det er meget lettere at arbejde med, når man skal skrive CSS-stylingen til menuen.
+                </p>
+                <p>
+                    Det betyder, at hele menuen skal omsluttes af en ul (unordered list) og hvert enkelt menupunkt bliver til en li (list item):
+                </p>
+
+                <img src="img/HTML-menu-in-ul.JPG" alt="menu in ul" class="fullwidth">
+
+                <p>
+                    Lige når du laver ændringen, vil din menu se skrækkelig ud, fordi vi endnu ikke har fortalt den, hvordan den skal se ud:
+                </p>
+
+                <img src="img/CSS-menu-in-ul.JPG" alt="menu in ul">
+                
+                <p>
+                    For at fjerne punkt-tegnene og få menupunkterne til at stå på linje igen, tilføjes følgende kode:
+                </p>
+
+                <img src="img/CSS-menu-ul-styling.JPG" alt="menu in ul styling">
+
+                <p>
+                    Fordi vi har lagt vores menu ind i en ul (unordered list) og herunder li (list item), kan vi henvise til al styling på vores menu vha <code>nav ul</code> og <code>nav ul li</code>. Vi kan på den måde blive meget specifikke på, hvad det er, vi gerne vil ramme med vores styling.
+                </p>
+
+                <h2>CSS dropdown menu</h2>
+
+                <p>
+                    Til en dropdown-menu skal man bruge en unordered list i to niveauer. Så først skal vi lære at lave en liste med en underliste:
+
+                    <ul>
+                        <li>Jeg er første punkt i den overordnede liste</li>
+                        <li>Jeg er andet punkt i den overordnede liste</li>
+                        <li>Jeg er tredje punkt i den overordnede liste
+                            <ul>
+                                <li>Jeg er første punkt i underlisten</li>
+                                <li>Jeg er andet punkt i underlisten</li>
+                                <li>Jeg er trejde punkt i underlisten</li>
+                            </ul>
+                        </li>
+                        <li>Jeg er fjerde punkt i den overordnede liste</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Læg mærke til i koden, at jeg starter min underliste midt i et overliggende li-element. Så min start li står før teksten på det overliggende liste-element, men min slut-li-tag står helt nede efter, at min underliste er blevet lukket igen.
+                </p>
+
+                <p>
+                    I fugleleksikonnet kommer det til at se ud på denne måde, når der bliver lavet en underliste med flyvende fugle:
+                </p>
+
+                <img src="img/Fugleleksikon-menu-i-flere-niveauer.JPG" alt="dropdown-menu" class="fullwidth">
+                <p>
+                    Jeg har menupunktet "Flying Birds" (som er et list-item i min øverste unordered list) på linje 15. Inden jeg afslutter det list-item, begynder jeg en ny unordered list på linje 16 (som bliver min undermenu/dropdown menu) og fylder den ud med de menupunkter (list-items og links på linje 17 - 19), som den skal indeholde. Herefter afslutter jeg min undermenu/dropdown menu på linje 20 og så afslutter jeg det overliggende list-item på linje 21. På linje 22 går jeg videre med at skrive det næste menupunkt "Flightless Birds" (list item) i den overliggende menu.
+                </p>
+                <h3>Vi skal nu i gang med at style på vores undermenu i CSS'en</h3>
+
+                <p>
+                    Det første vi skal gøre, er vi skal sørge for, at vores undermenu ikke bliver vist, når man kommer ind på siden. Det gør vi ved at bruge attributten display: none;
+                </p>
+                <!-- Vær opmærksom på, at <br> tegnene i koden nedenfor ikke skal skrives i CSS-koden. De er blot med her i HTML-koden for at få koden til at skifte linje, når den bliver vist i browseren. Den korrekte CSS kode vil se således ud:
+                
+                nav ul li ul
+                {
+                    display: none;
+                }
+                -->
+                    <code>nav ul li ul<br>
+                        {<br>
+                            display: none;<br>
+                        }<br>
+                    </code>
+                <p>
+                    Fra nu af skal vi til at holde tungen lige i munden for at få lavet vores styling på de rigtige elementer. I eksemplet ovenfor starter vi med at kigge ind i vores nav-tag, herunder har vi et ul-tag, under det et li-tag og under det et ul-tag. Hvis vi kigger på HTML-koden igen, så vil den første nav-selector henvise til nav-tagget i linje 12. Ul henviser til ul-tagget i linje 13. Li henviser til li-tagget i linje 15. Den anden ul-selector henviser til ul-tagget i linje 16.
+                </p>
+
+                <img src="img/Fugleleksikon-menu-i-flere-niveauer-forklaret.jpg" alt="CSS menu" class="fullwidth">
+
+                <p id="dropdownelementer">
+                    Så det vi ved nu er, at:
+                    <ul>
+                        <li><code>nav</code> - henviser til vores menulinje (navigation)</li>
+                        <li><code>nav ul</code> - henviser til den overordnede menu</li>
+                        <li><code>nav ul li</code> - henviser til menupunkterne (list items) i den overordnede menu</li>
+                        <li><code>nav ul li a</code> - henviser til selve linket i menupunkterne i den overordnede menu</li>
+                        <li><code>nav ul li ul</code> - henviser til vores undermenu (dropdown menuen)</li>
+                        <li><code>nav ul li ul li</code> - henviser til menupunkterne (list items) i vores undermenu</li>
+                        <li><code>nav ul li ul li a</code> - henviser til selve linket i menupunkterne i vores undermenu</li>
+                    </ul>
+                </p>
+                
+                <p>
+                    Når vi skal have åbnet vores undermenu, så sker det, når vi hover henover et af menupunkterne i overmenuen. Vi henviser til et menupunkt i overmenuen med <code>nav ul li</code>. Så vi kan henvise til, når vi hover over et menupunt i overmenuen ved at skrive <code>nav ul li:hover</code>. Udfordringen her er, at det jo er vores undermenu, vi skal have vist (display: block), og vi henviser til vores undermenu ved at skrive <code>nav ul li ul</code>, så hvordan åbner vi undermenuen ved at hover henover et menupunkt i overmenuen? Det gør vi ved at kombinere de to ting, jeg lige har beskrevet ovenfor:
+                </p>
+                
+                <p>
+                    <!-- Vær opmærksom på, at <br> tegnene i koden nedenfor ikke skal skrives i CSS-koden. De er blot med her i HTML-koden for at få koden til at skifte linje, når den bliver vist i browseren. Den korrekte CSS kode vil se således ud:
+                
+                    nav ul li:hover ul
+                    {
+                        display: block;
+                    }
+                    -->
+
+                    <code>nav ul li:hover ul<br>
+                        {<br>
+                            display: block;<br>
+                        }</code>
+                </p>
+
+                <p>
+                    Nu har vi den helt grundlæggende kode til at lave en dropdown menu. Der er dog en enkelt ting, som vi skal have gjort for at det virker 100%. Lige nu bliver vores dropdown en del af de øvrige elementer i menuen, fordi vi ikke har fortalt den andet. Det betyder, at øvrige menupunkter i overmenuen flytter sig i forhold til dropdown menuen, som i kan se i billedet nedenfor:
+                </p>
+                
+                <img src="img/Fugleleksikon-menu-i-flere-niveauer-positioning.JPG" alt="CSS menu">
+
+                <p>
+                    Dette skal vi have ændret ved at give vores undermenu en absolut position. Det betyder, at de andre elementer ikke forholder sig til, hvor henne vores undermenu er. De bliver blot stående på deres sædvanlige plads - uanset om undermenuen er åben eller lukket.
+                </p>
+                
+                <p>
+                    <!-- Vær opmærksom på, at <br> tegnene i koden nedenfor ikke skal skrives i CSS-koden. De er blot med her i HTML-koden for at få koden til at skifte linje, når den bliver vist i browseren. Den korrekte CSS kode vil se således ud:
+                
+                    nav ul li ul
+                    {
+                        position: absolute;
+                    }
+                    -->
+
+                    <code>nav ul li ul<br>
+                        {<br>
+                            position: absolute;<br>
+                        }</code>
+                </p>
+                
+                <p>
+                    Nu har du faktisk en fungerende dropdown menu. Alt, der skal gøres herefter, er at style på den, så den kommer til at se godt og funktionelt ud (links'ene er lette at læse og klikke på for brugeren). I opgaverne til i dag kommer du til at style din dropdown menu helt færdig. Hvis du undervejs er i tvivl om, hvilket element, du skal gøre hvad på, så gå tilbage til <a href="#dropdownelementer">oversigten</a> lidt længere heroppe, hvor du kan se, hvilken kode, der hører sammen med hvilket element.
+                </p>
+
+                <img src="img/Fugleleksikon-menu-i-flere-niveauer-faerdig.JPG" alt="CSS menu">
+                
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        My email password has been hacked. That's the third time I've had to rename the cat.
+    </footer>
+
+</body>
+</html>

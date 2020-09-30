@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <title>CSS Positioning</title>
+</head>
+<body>
+    <header>
+        <a href="tags.html">HTML intro</a>
+        <a href="index.html">CSS intro</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <h1>CSS positioning</h1>
+        <section>
+            <article>
+                <p>
+                    I nogle tilfælde skal vi kunne placere elementer på et helt fast sted, når vi arbejder med hjemmesider.
+                </p>
+                <p>
+                    Det vil ofte være tilfældet, når vi arbejder med menuer, som vi gerne vil have til at blive i toppen, så brugerne hele tiden har adgang til dem. Det kan også være i forbindelse med, at vi laver en dropdown-menu, som vi skal i den næste lektion.
+                </p>
+                <p>
+                    CSS har flere forskellige positioner, som man kan anvende:
+                    <ul>
+                        <li>relative - som betyder, at elementet placerer sig relativt i forhold til de andre elementer på siden. Som udgangspunkt gør det ikke nogen forskel i elementets placering, men den kan være det rigtige valg, når vi senere skal snakke om Z-index</li>
+                        <li>absolute - som betyder, at elementet har en absolut placering, som den altid beholder, uanset hvordan de andre elementer placerer sig. Elementet scroller dog stadig med op og ned, når man scroller på siden</li>
+                        <li>fixed - som betyder, at elementet har en fast placering på skærmen, hvor det også bliver, selvom man scroller op og ned. Dette bruges ofte til at beholde en menulinje (og måske også en footer) samme sted på skærmen hele tiden</li>
+                        <li>sticky - som betyder, at elementet bevæger sig frit på skærmen, så længe det ikke har nået toppen eller bunden. Når det når toppen eller bunden, klistrer det sig fast og bliver der, indtil man scroller tilbage til det sted, hvor det ligger på siden og så begynder det at følge med scrollingen igen. Du kan se et eksempel på sticky på <a href="https://www.w3schools.com/howto/howto_css_sticky_element.asp" target="_blank">w3schools</a></li>
+                    </ul>
+                </p>
+
+                <p>
+                    Når man bruger absolute, fixed eller sticky skal man angive den position, som elementet skal placeres på. Det gør man ved at angive enten top, right, bottom eller left - fx:
+                </p>
+               
+                <p>
+                    position: fixed;<br>
+                    top: 0;
+                </p>
+
+                <p>
+                    Du skal også være opmærksom på, at når du begynder at angive en position, så kan du risikere, at elementet begynder at opføre sig anderledes, end det gjorde uden en position - fx i forhold til bredde. Så oftest skal et element, der har en position, også have en bredde fx på 100% for fortsat at fylde hele bredden - fx:
+                </p>
+
+                <p>
+                    position: fixed;<br>
+                    top: 0;<br>
+                    width: 100%;
+                </p>
+
+                <h2>Position og Z-index</h2>
+
+                <p>
+                    Når du har angivet en position, skal du også være opmærksom på z-index. Z-index er placeringen af elementer i den 3. dimension. Du placerer allerede elementer horisontalt og vertikalt (ligesom i et koordinatsystem) ved at angive højde og bredde og margen/padding i højden og bredden. Den 3. dimension (z-index'et) svarer lidt til en bunke papir på et bord. Papirerne kan ligge ovenpå hinanden, og det du kan se, er det papir, der ligger øverst (eller hvis det ikke dækker alt på papiret nedenunder, så kan du også se noget af det). På samme måde kan dine elementer på din webside også placeres ovenpå hinanden, så man kun kan se det øverste. Det vil du komme til at opleve, når du begynder at bruge CSS position. Hvis du fx sætter en menulinje til at være fixed, så vil du opleve, at den kommer til at placere sig foran de øvrige elementer, og måske forsvinder noget af din side ind bagved menulinjen. Dette skal du så style dig ud af ved at sætte noget margen (fx i toppen) på det næste element (meget ofte på main eller på header - afhængigt af, hvilket element der kommer efter din nav).
+                </p>
+
+                <p>
+                    Du kan angive et Z-index med CSS attributten z-index og så et tal - fx z-index: 5;
+                </p>
+
+                <p>
+                    Elementet med det højeste z-index vil blive vist øverst.
+                </p>
+                <p>
+                    Vær opmærksom på, at du kun kan sætte et z-index på et element, hvis du også har brugt position attributten. Du kan altså ikke bare skrive z-index: 10 og så forvente, at dette element bliver vist foran andre elementer. I det tilfælde er du også nødt til at bruge position: relative for at attributten z-index også virker.
+                </p>
+
+                <p>
+                    Hvis du fx har lavet en fixed menulinje, som altid sidder fast i toppen af skærmen, vil du opleve, at resten af siden ligesom scroller ind bagved din menu. Det vil fungere i langt de fleste tilfælde, men har du pludselig et billede, som scroller foran menulinjen, så skal du have sat et z-index på din menulinje og et z-index på dine billeder - og så skal menulinjen have et større tal end billederne.
+                </p>
+
+                <h2>Videre med dit fugleleksikon</h2>
+                
+                <p>
+                    Gå videre med de opgaver, som står under "Opgaver som laves, når du har læst siden CSS Positioning".
+                </p>
+                
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        A clean house is the sign of a broken computer!
+    </footer>
+
+</body>
+</html>

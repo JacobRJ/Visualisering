@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS Margener</title>
+</head>
+<body>
+    <header>
+        <a href="tags.html">HTML intro</a>
+        <a href="index.html">CSS intro</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <section>
+            <h1>
+                CSS Margener og Størrelser
+            </h1>
+            <article>
+                <h2>Margin og Padding</h2>
+
+                <p>
+                    Hvis du tænker på dine HTML-elementer som kasser, så er margin den luft, der er udenfor kassen og padding er den luft, der er inden i kassen (imellem kassens kant og indholdet i kassen - indholdet i kassen kan enten være tekst, billede eller et andet HTML-tag).
+                </p>
+                <img src="img/CSS-padding-margin.JPG" alt="CSS margin and padding">
+                <p>
+                    Alle browsere har et default stylesheet, som de anvender, hvis din side ikke har et stylesheet eller ikke overskriver de attributter, som står i browserens stylesheet. Browserens stylesheet sætter bl.a. skriftstørrelser, fed skrift i overskrifter, indrykning i punktopstillinger og margener i både top, bund, venstre og højre side.
+                </p>
+                <p>
+                    Især standard margenerne kan godt give udfordringer, når du vil have din side til at se ud på en bestemt måde. Mange har fx en menulinje som fylder hele bredden, og det vil man ikke kunne, hvis ikke man har fjernet browserens standard margener.
+                </p>
+                <p>
+                    Derfor anbefales det, at man altid starter sit stylesheet med at nulstille alle margener og paddinger, for ikke at støde ind i problemer med dette undervejs. Det øverste element på en HTML-side er HTML-tags'ene. Dette kaldes også root element og kan i CSS også skrives som en stjerne (*) - og ofte kaldes denne nulstilling for et root reset. Så for at nulstille alle margener og paddings på din side, bør alle dine stylesheets starte med følgende kode:
+                </p>
+                    <img src="img/CSS-root-reset.JPG" alt="CSS root reset">
+                <p>
+                    Du kan enten sætte dine margener enkeltvis, flere ad gangen eller alle på en gang:
+                    <ul>
+                        <li>margin-bottom: 20px;</li>
+                        <li>margin-top: 10%;</li>
+                        <li>margin-left: 300px;</li>
+                        <li>margin-right: 20%;</li>
+                        <li>margin: 20px 15px 30% 30px (angiver margen for top, højre, bund, venstre)</li>
+                        <li>margin: 20px 15px 30px (angiver margen for top = 20px, højre/venstre = 15px, bund = 30px)</li>
+                        <li>margin: 20px 15px (angiver margen for top/bund = 20px, højre/venstre = 15px)</li>
+                        <li>margin: 20px (angiver margen for alle fire sider = 20px)</li>
+                    </ul>
+                </p>
+                <p>
+                    Du kan angive dine paddings på samme måde, som du lige har læst om margener.
+                </p>
+                <h2>Rammer</h2>
+                <p>
+                    Du kan sætte rammer rundt om dine HTML-elementer ved at bruge attributten "border".
+                </p>
+                <p>
+                    Du kan angive rammens type (stiplet, solid, prikket og andre typer) med attributten border-style.<br>
+                    Du kan angive rammens tykkelse (i px eller %) med attributten border-width. <br>
+                    Du kan angive rammens farve (i hex eller rbg) med attributten border-color.
+                </p>
+                <p>
+                    Du kan også angive det hele på en gang med attributten "border":
+                    <ul>
+                        <li>border: 5px solid red;</li>
+                        <li>border-left: 5px solid blue;</li>
+                        <li>border-bottom: 2px dashed rgb(120, 42, 28);</li>
+                    </ul>
+                </p>
+
+                <img src="img/CSS-borders.JPG" alt="CSS borders">
+
+                <h2>Afrundede rammer eller kanter</h2>
+                <p>
+                    Med border-radius kan du angive at rammer eller kanter skal være afrundede. Værdien kan angives enten i pixels eller i procent. Eksperimentér lidt med de forskellige værdier for at finde den afrunding, som passer til din side.
+                </p>
+
+                <img src="img/CSS-rounded-borders.JPG" alt="CSS border radius">
+
+                <p>
+                    Du kan specificere din afrunding på hvert enkelt hjørne:
+                    <ul>
+                        <li>border-top-left-radius: 10px;</li>
+                        <li>border-top-right-radius: 15px;</li>
+                        <li>border-bottom-right-radius: 20%;</li>
+                        <li>border-bottom-left-radius: 25%;</li>
+                    </ul>
+                    Eller du kan specificere flere hjørner:
+                    <ul>
+                        <li>border-radius: 10px 15px 20px 25px (her angives øverste venstre (10px), øverste højre (15px), nederste højre (20px), nederste venstre (25px))</li>
+                        <li>border-radius: 10px 15px 20px (her angives øverste venstre (10px), øverste højre og nederste venstre (15px), nederste højre (20px))</li>
+                        <li>border-radius: 10px 20px (her angives øverste venstre og nederste højre (10px), øverste højre og nederste venstre (20px))</li>
+                        <li>border-radius: 20px (her angives 20px på alle fire hjørner)</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Du kan også angive afrundede hjørner på et område, som ikke har en ramme, men som har en baggrundsfarve. Så vil din border-radius vise sig i din baggrundsfarve:
+                </p>
+
+                <img src="img/CSS-rounded-background.JPG" alt="CSS border radius on background">
+
+                <p>
+                    Border-radius kan også bruges på billeder, som så vil få afrundede hjørner.
+                </p>
+
+                <h2>Størrelser</h2>
+                <p>
+                    Du kan angive størrelser på dine elementer med width (bredde) og height (højde).
+                </p>
+                <p>
+                    Størrelsen kan ligesom med andre størrelser angives i px eller %. I forbindelse med størrelser af elementer, er der dog også to andre enheder, som bliver interessant:
+                    <ul>
+                        <li>Viewport Width - som forkortes vw</li>
+                        <li>Viewport Height - som forkortes vh</li>
+                    </ul>
+                    En viewport er størrelsen på den skærm, som du sidder og kigger på lige nu. Hele bredden på din skærm svarer til 100vw (viewport width). Så 1vw svarer til 1% af din skærms bredde.
+                </p>
+                <p>
+                    På samme måde svarer 100vh (viewport height) til 100% af din skærms højde, og 1vh svarer til 1% af din skærms højde.
+                </p>
+
+                <p>
+                    Dette er relevant i forhold til at lave websider, som både kan vises på en desktop skærm og en mobilskærm. Det man kalder responsive websider.
+                </p>
+
+                <p>
+                    Hvis du har angivet en bredde i pixels, vil dette være en fast bredde, som dit element har, uanset om din bruger sidder på en 1920 x 1080 skærm, eller om din bruger sidder på en 360 x 760 mobilskærm.
+                </p>
+
+                <p>
+                    Hvis du fx har et billede, som ser rigtigt god ud på din desktop skærm, når det er 500px bredt, så vil det give sidescrolling (horisontal scrolling) på en mobiltelefon, som kun er 360px bred. Og hvis der er noget, vi synes er træls, så er det sidescrolling ;)
+                </p>
+
+                <p>
+                    Derfor kan man fx angive, at et billede skal fylde 50vw (viewport width). Så fylder det altid halvdelen af skærmen, uanset om man ser det på en mobil, tablet, bærbar eller desktop skærm.
+                </p>
+
+                <h3>Men er viewport width så ikke bare det samme som procent?</h3>
+                <p>
+                    Jo, i nogle tilfælde er det. Forskellen er, at bredde i procent er afhængigt af det overliggende elements bredde. Hvis du har et billede, der ligger i din main, og din main er sat til at fylde 2/3 af din skærms bredde, så vil dit billede med en bredde på 50% kun komme til at fylde 50% af main's bredde.
+                </p>
+
+                <h3>Centreret indhold</h3>
+                <p>
+                    Hvis du har angivet en bredde på et element, kan du centrere elementet ved at sætte elementets margener til 50%.
+                </p>
+
+                <h2>Fælles opgave - margins, paddings og rammer</h2>
+                <p>
+                    Start med at lave dit root reset af al margin og padding.
+                </p>
+                <p>
+                    Din header og footer skal være 50px høje og have baggrundsfarven tomato. Tekst i header og footer skal centreres.
+                </p>
+                <p>
+                    Main området skal være 1000px bredt og centreres.
+                </p>
+                <p>
+                    Alle billeder skal være 300px brede og have afrundede hjørner på 10px.
+                </p>
+                <p>
+                    Linjehøjden sættes i body'en til at være 1.8.
+                </p>
+                <p>
+                    Linjehøjden sættes i header og footer til at være 50px. Det er en nem måde at centrere din tekst lodret.
+                </p>
+                <p>
+                    h1'ere og h2'ere skal have en margen på 20px i top og bund.
+                </p>
+                <p>
+                    p afsnit skal have en margen på 40px i bunden.
+                </p>
+                <p>
+                    Punktopstillinger skal have flyttet punkttegnet ind i dit main-område. Når punkttegnet er endt udenfor main-området, så er det fordi, punktopstillinger som standard har sat attributten list-style-position: outside. For at ændre dette skal du på ul sætte list-style-position: inside;
+                </p>
+                <p>
+                    Teksten i header og footer skal være i store bogstaver og skriftstørrelsen skal være 20px. Prøv at sætte skriftfarven til hvid i header og footer. Slår det igennem? Det snakker vi om i næste lektion.
+                </p>
+
+                <h2>Videre med dit fugleleksikon</h2>
+                <p>
+                    Du skal nu arbejde videre på dit fugleleksikon. Brug de attributter, som du har lært i løbet af i dag, til at gøre din side pæn og interessant. Sæt fx en fast bredde på siden og sørg for at centrere den. Eksperimentér med rammer og border-radius på forskellige elementer på din side.
+                </p>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <a href="selectors.html">I morgen skal vi arbejde videre med CSS selectors.</a>
+    </footer>
+</body>
+</html>

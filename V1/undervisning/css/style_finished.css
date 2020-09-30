@@ -1,0 +1,150 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    color: darkslategray;
+    background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+}
+
+main
+{
+    width: 1000px;
+    margin: 50px auto;
+    
+}
+
+header, footer
+{
+    height: 50px;
+    background-color: tomato;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+
+header
+{
+    top: 0;
+}
+
+footer
+{
+    bottom: 0;
+} 
+
+header a, footer a
+{
+    color: whitesmoke;
+    padding: 0 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a:hover
+{
+    background-color: rgba(255,255,255,0.3);
+}
+
+h1, h2, h3
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2
+{
+    text-align: center;
+    text-shadow: -2px -2px 2px silver;
+    margin: 20px 0;
+}
+
+h1
+{
+    color: midnightblue;
+    font-size: 36px;
+    font-variant: small-caps;
+}
+
+h2
+{
+    color: steelblue;
+    font-size: 30px;
+}
+
+h3
+{
+    font-size: 24px;
+}
+
+p
+{
+    margin-bottom: 40px;
+}
+
+img
+{
+    width: 300px;
+    border-radius: 10px;
+}
+
+img.fullwidth
+{
+    width: 100%;
+}
+
+a
+{
+    text-decoration: none;
+    color: slategrey;
+}
+
+main a:visited
+{
+    color: darkred;
+}
+
+main a:hover
+{
+    color: darkorchid;
+}
+
+
+
+ul
+{
+    list-style-position: inside;
+}
+
+li
+{
+    line-height: 1.8;
+}
+
+ul li ul
+{
+    margin-left: 20px;
+}
+
+.code
+{
+    list-style-type: none;
+}
+
+.code li ul
+{
+    padding-left: 20px;
+}
+
+code
+{
+    font-size: 18px;
+}

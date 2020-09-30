@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <title>CSS Tekst og fonte</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Forsiden</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <h1>CSS tekst og fonte</h1>
+        <section>
+            <article>
+                <h2>CSS fonte</h2>
+                <p>
+                    Man angiver en font/skrifttype i CSS ved at bruge attributten font-family.
+                </p>
+                <p>
+                    Font-family skrives således, at man først angiver den specifikke font, man ønsker at anvende. Herefter kan man angive en alternativ font, som man er mere sikker på, at brugerne har installeret på sin computer. Til slut angiver man en generisk font-type.
+                </p>
+                <h2>De generiske font-typer</h2>
+                <p>
+                    Fonte opdeles som udgangspunkt i to generiske typer: serif og sans-serif.</p>
+                <p>
+                    Serif fonte er fx Times New Roman, og de kan genkendes på deres små seriffer (de små linjer bl.a. i bunden og toppen af hvert bogstav).
+                </p>
+                    
+                <img src="img/Serif-font.JPG" alt="serif font">
+                
+                <p>
+                    Sans-serif fonte er fx Arial, og de har ikke de små seriffer, som serif fontene har (sans-serif er fransk og betyder "uden serif").
+                </p>
+                
+                <img src="img/Sans-serif-font.JPG" alt="sans serif font">
+                
+                <p>
+                    Man betragter ofte serif-fontene som værende lidt gammeldags (det er også de ældste fonte af de to typer), hvorimod sans-serif fontene bliver set som mere moderne. Dette er vigtigt i forhold til, hvilket signal man gerne vil have ens hjemmeside skal sende.
+                </p>
+                <p>
+                    Når du skal angive din font med CSS, skal du skrive følgende kode:
+                    <ul>
+                        <li>font-family: Tahoma, Arial, sans-serif;</li>
+                        <li>Tahoma er den specifikke font, som du gerne vil have brugt på dit website, hvis brugeren har den installeret</li>
+                        <li>Arial er det bedste alternativ, som er en font, du ved, er installeret på rigtigt mange maskiner</li>
+                        <li>Det sidste alternativ er den generiske font-type, som du vil have, hvis hverken Tahoma eller Arial er tilgængelig. Brugerens computer vil så vælge den standard sans-serif font, som er installeret på computeren</li>
+                        <li>Hvis et af elementerne er i flere ord (fx Times New Roman), skal dette skrives i anførselstegn: "Times New Roman"</li>
+                    </ul>
+                </p>
+                <p>
+                    Brug af fonte på denne måde kræver, at de er installeret på brugerens computer. Du kan på w3schools se en <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blank">liste over fonte, som kan anvendes på næsten alle computere</a>.
+                </p>
+                <h2>Eksterne fonte / Google Fonts</h2>
+                <p>
+                    Hvis du vil være helt sikker på at få en bestemt font vist på din hjemmeside og ikke være afhængig af, hvad brugeren har installeret på sin computer, kan du bruge en ekstern font.
+                </p>
+                <p>
+                    En af de sider, der bliver brugt allermest til eksterne fonte, er <a href="https://fonts.google.com/ target="_blank">Google Fonts</a>.
+                </p>
+                <p>
+                    Alle de fonte, der findes på Google Fonts, er gratis at bruge.
+                </p>
+                <h3>Find og anvend en Google Font</h3>
+                <p>
+                    På <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> starter du med at finde den font, du gerne vil bruge. Herefter klikker du på det rød/hvide plus i øverste højre hjørne på fonten.
+                </p>
+                <img src="img/Select-font-googlefonts.png">
+                <p>
+                    Herefter kommer fonten ned at ligge i dine valgte fonte, som du kan se i nederste højre hjørne i feltet "Family(s) Selected". Hvis du klikker på stregen til højre, kan du folde vinduet ud og se, hvordan du bruger den eller de fonte, som du har valgt:
+                </p>
+                <img src="img/Google-font.png">
+                <p>
+                    De to grå kasser er den kode, du skal skrive ind. Den øverste grå kasse med "link href" koden skal skrives ind i HEAD-sektionen på dine HTML-sider (alle de sider, som skal bruge denne font - hvilket næsten altid vil være alle sider i dit website). Koden i den nederste grå kasse er den kode, som du skal skrive ind i dit stylesheet, der hvor du gerne vil have denne font til at slå igennem. Dvs. hvis du vil bruge denne font til al din tekst på hele siden, skriver du koden i din BODY-selector. Hvis du fx kun vil bruge den på overskrifter, skriver du den i din h1-selector.
+                </p>
+                
+                <h2>Andre font stylinger</h2>
+                <p>
+                    Du kan også angive andre attributter på din skrifttype med CSS. De fleste af dem er listet nedenfor:
+                </p>
+                
+                <h3>Font Style</h3>
+                <p>
+                    Font style anvendes primært til at lave kursiv skrift:
+                    <ul>
+                        <li>font-style: italic; (kursiv)</li>
+                        <li>font-style: normal; (ikke kursiv)</li>
+                    </ul>    
+                </p>
+
+                <h3>Font Size</h3>
+                <p>
+                    Med font size angiver du størrelsen på din skrifttype:
+                    <ul>
+                        <li>font-size: 16px;</li>
+                    </ul>
+                    Der må ikke være mellemrum mellem tallet og enheden. 16 px vil ikke virke - men 16px virker.
+                </p>
+
+                <h3>Font Variant</h3>
+                <p>
+                    Font variant bruges til at lave kapitæler (alle små bogstaver laves om til store bogstaver, som har samme højde som små bogstaver). Bogstaver, som var store bogstaver i den oprindelige tekst, bliver ved med at se ud, som de hele tiden har gjort.
+                    <ul>
+                        <li>font-variant: small-caps;</li>
+                    </ul>
+                </p>
+
+                <img src="img/Kapitaeler.JPG">
+
+                <h3>Font Weight</h3>
+                <p>
+                    Font weight angiver fed eller tynd skrift. Du kan angive font-weight enten med et tal mellem 100 og 900 (400 er normal tykkelse og 700 svarer til fed skrift (bold)) eller keywordet "normal" eller "bold":
+                    <ul>
+                        <li>font-weight: 800;</li>
+                        <li>font-weight: bold;</li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h2>Tekst stylinger</h2>
+                <p>
+                    Nedenfor finder du flere muligheder for at style på din tekst.
+                </p>
+
+                <h3>Text Alignment</h3>
+                <p>
+                    Du kan justere din tekst enten til højre, venstre, centreret eller justeret (lige højre og venstre kant):
+                    <ul>
+                        <li>text-align: left;</li>
+                        <li>text-align: right;</li>
+                        <li>text-align: center;</li>
+                        <li>text-align: justify;</li>
+                    </ul>
+                </p>
+
+                <h3>Text Decoration</h3>
+                <p>
+                    Text decoration anvendes til at lave understregninger, gennemstregninger og lignende på din tekst:
+                    <ul>
+                        <li>text-decoration: overline; (giver en linje over din tekst)</li>
+                        <li>text-decoration: line-through; (giver en linje igennem din tekst, så den ser ud, som om, den er streget ud/over)</li>
+                        <li>text-decoration: underline; (giver en understregning under din tekst)</li>
+                        <li>text-decoration: none; (fjerner alle streger ved din tekst. Bruges meget ofte til at fjerne den standard understregning, som der sættes på links)</li>
+                    </ul>
+                    Lad være med at understrege anden tekst end links, da det vil forvirre brugerne. De er vant til, at understreget tekst i en browser er noget, man kan klikke på.
+                </p>
+
+                <h3>Text Transform</h3>
+                <p>
+                    Med text-transform kan du lave din tekst om til små bogstaver, store bogstaver eller med stort begyndelsesbogstav:
+                    <ul>
+                        <li>text-transform: uppercase; (laver om til store bogstaver)</li>
+                        <li>text-transform: lowercase; (laver om til små bogstaver)</li>
+                        <li>text-transform: capitalize; (laver om til at hvert ord starter med stort bogstav)</li>
+                    </ul>
+                </p>
+
+                <h3>Text Indentation</h3>
+                <p>
+                    Med text-indent kan du lave en indrykning af den første linje i en tekst:
+                    <ul>
+                        <li>text-indent: 50px;</li>
+                    </ul>
+                </p>
+
+                <h3>Line Height</h3>
+                <p>
+                    Du kan angive linjehøjden på flere forskellige måder:
+                    <ul>
+                        <li>Med et tal: dette tal ganges så med den skriftstørrelse, som bruges på den aktuelle tekst (hvis teksten er 16px og linjehøjden er 1.5, bliver linjehøjden på 24px)
+                            <ul>
+                                <li>line-height: 1.6;</li>
+                            </ul>
+                        </li>
+                        <li>Med et antal pixels
+                            <ul>
+                                <li>line-height: 24px;</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+
+                <h3>Text Shadow</h3>
+                <p>
+                    Med text-shadow kan du sætte skygge på din tekst. Dette anvendes ofte på overskrifter for at få dem til at stå tydeligere frem.
+                </p>
+                <p>
+                    Du kan angive fire værdier, når du laver en text-shadow:
+                    <ul>
+                        <li>Horisontal placering af skyggen (hvor langt væk fra teksten skal skyggen være vandret i pixels)</li>
+                        <li>Vertikal placering af skyggen (hvor langt væk fra teksten skal skyggen være lodret i pixels)</li>
+                        <li>Hvor stort et område skal din skygge fylde (dens sløring/blur). Angives også i pixels. Denne værdi er ikke påkrævet og du kan godt skrive din CSS-kode uden den.</li>
+                        <li>Skyggens farve (farven kan angives på samme måder, som du har lært tidligere: farvenavn, RGB-kode eller hex-kode)</li>
+                        <li>text-shadow: -2px -2px 4px silver;</li>
+                        <li>text-shadow: 3px 3px rgb(243, 92, 10);</li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h2>Fælles opgave</h2>
+                <h3>Skrifttype/font</h3>
+                <p>
+                    Du skal sætte skrifttypen på al tekst i body'en på siden her til at være Arial, Helvetica, sans-serif
+                </p>
+                <p>
+                    Alle overskrifter (både h1'ere, h2'ere og h3'ere) skal være Roboto fra <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+                </p>
+                <p>
+                    TIP: Hvis du skal sætte den samme attribut på flere tags/selectors, kan du skrive dette ved at adskille dem med komma:
+                </p>
+                <p>
+                    h1, h2, h3 {
+                </p>
+                <p>
+                    font-family: ....
+                </p>
+                <p>
+                    }
+                </p>
+                <h3>Øvrig styling af tekst</h3>
+                <p>
+                    Alle h1'ere skal have en font-weight på 800.
+                </p>
+                <p>
+                    Alle h2'ere skal have en font-weight på 600.
+                </p>
+                <p>Siden skal have følgende skriftstørrelser for overskrifter:
+                    <ul>
+                        <li>h1'ere: 36px</li>
+                        <li>h2'ere: 30px</li>
+                        <li>h3'ere: 24px</li>
+                    </ul>
+                </p>
+                <p>Alle h1'ere skal laves om til kapitæler.</p>
+                <p>Alle h2'ere skal laves om til store bogstaver.</p>
+                <p>h1'ere og h2'ere skal centreres.</p>
+                <p>Alle links skal have fjernet understregningen. Samtidigt skal skriftfarven på links laves om til en anden farve end resten af din tekst. Sørg for at vælge en farve, som ligner din skriftfarve men enten er lidt mørkere eller lysere.</p>
+                <p>Linjehøjden på dine li-tags skal sættes til 1.8.</p>
+                <p>h1'ere og h2'ere skal have en tekstskygge, som er placeret 2px til venstre (du skal bruge negative tal for at placere skyggen til venstre for teksten), 2px over (du skal bruge negative tal for at placere skyggen over teksten), som er 2px sløret og anvender farven "silver".</p>
+
+                <h2>Videre med dit fugleleksikon</h2>
+                <p>
+                    Du skal nu arbejde videre på dit fugleleksikon. Find to skrifttyper på Google Fonts, som du vil bruge på din side. En skrifttype til h1'ere og h2'ere og en anden skrifttype til al anden tekst.
+                </p>
+                <p>
+                    Brug de øvrige attributter, som du har lært i løbet af i dag, til at gøre din tekst pæn og interessant på din side.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <a href="margins.html">I morgen skal vi arbejde videre med bl.a. margener og størrelser i CSS.</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS Selectors</title>
+</head>
+<body>
+    <header>
+        <a href="tags.html">HTML intro</a>
+        <a href="index.html">CSS intro</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <section>
+            <h1>
+                CSS Selectors
+            </h1>
+            <article>
+                <p>
+                    Indtil videre har vi arbejdet med CSS, som rammer alle tags af samme type på hele websiden. Når vi har stylet på h1-tags, så har det ramt alle h1-tags på hele siden.
+                </p>
+                <p>
+                    Vi kan blive mere specifikke ved at angive CSS descendants (underliggende elementer), så vi ikke rammer fx alle a-tags men kun dem, der ligger inden i header-tags.
+                </p>
+                <p>
+                    Hvis man skriver to CSS selectors efter hinanden (med mellemrum imellem) betyder det, at man skal tage hensyn til begge selectors: header img betyder, at den styling, der kommer nu, kun gælder for img tags, der ligger inden i header tags (altså billeder i vores header område).
+                </p>
+                
+                <img src="img/CSS-descendant.JPG" alt="CSS descendants">
+
+                <p>
+                    Den underliggende selector behøver ikke ligge i niveauet lige under den overliggende selector. Den skal bare ligge et eller andet sted under, så vil CSS stylingen slå igennem på den.
+                </p>
+                <p>
+                    Dette bruges ofte til at lave menuer eller headere, hvor tekst og billeder skal opføre sig lidt anderledes end andre steder på siden.
+                </p>
+
+                <p>
+                    Vi kan fx bruge det til at gøre tekstfarven hvid i vores header og footer. Vi oplevede på forrige side, at vi ikke kunne få den hvide farve til at slå igennem. 
+                </p>
+                <p>
+                    I stylesheetet skal du nu skrive følgende:<br>
+                    header a, footer a<br>
+                    {<br>
+                        color: whitesmoke;<br>
+                        text-decoration: none;<br>
+                        margin: 0 20px;<br>
+                    }<br>
+                </p>
+                <p>
+                    Det gør tekstfarven hvid og fjerner understregningen på alle a-tags, som ligger under header-tagget og alle a-tags, som ligger under footer-tagget.
+                </p>
+                <p>
+                    Tjek i din browser hvordan dine links i headeren nu ser ud. Nu begynder den efterhånden at ligne en menu.
+                </p>
+
+                <h2>Direct descendants</h2>
+                <p>
+                    Vi kan også fortælle CSS, at den kun skal ramme selectors, som ligger i niveauet lige under den overliggende selector.
+                </p>
+
+                <p>
+                    Det gør vi med større-end tegnet (krokodillenæb) på følgende måde: header > a.
+                </p>
+                <p>
+                    På den måde kan vi blive mere og mere specifikke med de tags/selectors, som vi ønsker at ramme med vores styling.
+                </p>
+
+                <h2>Hvad så nu?</h2>
+                <p>
+                    Undervejs i løbet af ugen har du måske arbejdet på dit fugleleksikon med de ting, som vi har lært i CSS. Du skal nu arbejde videre på dit fugleleksikon - bl.a. kan du nu lave noget, der begynder at ligne en menustruktur. Du kan også style på dine billeder og give dem rundede hjørner - bortset fra header-billedet.
+                </p>
+                <p>
+                    Derudover skal du gøre siden så pæn som muligt med skrifttyper, farver, baggrundsfarver osv
+                </p>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#">Lige nu er der ikke flere spændende ting at skrive i footeren.</a>
+    </footer>
+</body>
+</html>

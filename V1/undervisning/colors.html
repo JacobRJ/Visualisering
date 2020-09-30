@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS Farver</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Forsiden</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <section>
+            <h1>
+                CSS Farver
+            </h1>
+            <article>
+                <h2>Baggrundsfarver</h2>
+
+                <p>
+                    Du kan sætte baggrundsfarven på en selector med attributten background-color.
+                </p>
+                <p>
+                    Ligesom med tekstfarver, kan du bruge <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">CSS' standard farvenavne</a>, men du kan også bruge RGB farver eller hex-farver.
+                </p>
+                <p>
+                    Du bruger RGB-farver på følgende måde:
+                    <ul>
+                        <li>background-color: RGB(112, 128, 144);</li>
+                    </ul>
+                </p>
+                <p>
+                    Du bruger hex-farver på følgende måde:
+                    <ul>
+                        <li>background-color: #708090;</li>
+                    </ul>
+                </p>
+                <p>
+                    Med baggrundsfarver kan du meget tydeligt markere de forskellige elementer (HTML-tags eller CSS selectors), som du har på din side.
+                </p>
+
+                <h2>Fælles opgave - baggrundsfarver</h2>
+                <p>
+                    Vi skal nu sætte baggrundsfarver ind på de enkelte elementer på denne side, så vi får et tydeligt billede af, hvilke områder de enkelte HTML tags omslutter.
+                </p>
+                <p>
+                    Hver gang vi har sat en ny baggrundsfarve ind, går vi ind og ser siden i browseren, så vi hele tiden kan følge med i, hvilket område der blev påvirket af farven.
+                </p>
+                <p>
+                    Du skal sætte følgende baggrundsfarver ind i denne rækkefølge:
+                    <ul>
+                        <li>Din body skal have baggrundsfarven: gainsboro</li>
+                        <li>Din header skal have baggrundsfarven: orangered (læg mærke til, at der er en lille margen udenom din header både i toppen og til venstre og højre. Dette er browserens standard-margen)</li>
+                        <li>Din main skal have baggrundsfarven: gold</li>
+                        <li>Din section skal have baggrundsfarven: mediumpurple (læg mærke til, at din section overskriver den baggrundsfarve, du gav din main)</li>
+                        <li>Din h1 skal have baggrundsfarven: greenyellow</li>
+                        <li>Din article skal have baggrundsfarven: bisque</li>
+                        <li>Din h2 skal have baggrundsfarven: lightyellow</li>
+                        <li>Din p skal have baggrundsfarven: yellow</li>
+                        <li>Din ul skal have baggrundsfarven: silver</li>
+                        <li>Din li skal have baggrundsfarven: tomato</li>
+                        <li>Din a skal have baggrundsfarven: rosybrown</li>
+                        <li>Din footer skal have baggrundsfarven: plum</li>
+                    </ul>
+                </p>
+                <p>
+                    Læg mærke til, at der ikke bliver indsat en baggrundsfarve på din footer. Det er fordi, footeren ikke indeholder noget, og derfor bliver der ikke afsat plads til den på siden. Gå nu ind i footeren, lav et p-tag og skriv: "Her er min footer" inde i p-tagget.
+                </p>
+                <p>
+                    Footeren får ikke den "plum" baggrundsfarve, som vi havde bedt om, fordi browseren læser kronologisk. Det betyder, at den først når til footer-tagget og sætter baggrundsfarven til "plum" og bagefter læser den p-tagget og sætter baggrundsfarven til "yellow". Prøv nu at fjerne p-tagget fra din footer, så teksten bare står direkte i footer-tagget. Så ændrer baggrundsfarven sig til "plum".
+                </p>
+                <p>
+                    Prøv at gå tilbage til index-siden (forsiden). Fordi vi har linket til et eksternt stylesheet, er alle de farver, du lige har siddet og lavet, også slået igennem på index-siden.
+                </p>
+                <p>
+                    Lav nu farverne om, så de bliver til noget, du kan holde ud at se på, når du skal læse og arbejde videre på disse sider.
+                </p>
+                <h2>Gennemsigtige farver</h2>
+                <p>
+                    Du kan angive gennemsigtighed på en farve ved at bruge en alfa-kanal. Dette kan du kun gøre med RGB-farver (eller med hsl-farver, som vi skal lære på et senere tidspunkt).
+                </p>
+                <p>
+                    For at angive en gennemsigtig farve, skal du bruge RGBa. A'et angiver alfa-kanalen og det kan være en værdi mellem 0 og 1. 1 er slet ikke gennemsigtig (på engelsk opaque) og 0 er helt gennemsigtig (på engelsk transparent). Vær opmærksom på at decimal-tal i CSS skal angives med punktum og ikke med komma.
+                    <ul>
+                        <li>bg-color: rgba(112, 128, 144, 0.8);</li>
+                    </ul>
+                </p>
+                <p>
+                    Du kan bruge gennemsigtige farver på alle elementer, som kan farvelægges - fx også tekstfarve.
+                </p>
+
+                <h2>Videre med dit fugleleksikon</h2>
+                <p>
+                    Du skal nu arbejde videre på dit fugleleksikon. Find en god baggrundsfarve, som du kan bruge til din side. Gå ind på <a href="https://color.adobe.com/da/create/image" target="_blank">color.adobe.com</a> og upload eller træk headerbilledet ind for at udtrække en farve fra headerbilledet, som kan bruges som baggrundsfarve. Du kan flytte rundt på de punkter i billedet, som siden automatisk foreslår, så du får fundet en god farve.
+                </p>
+                <p>
+                    På hver individuel fugleside, skal du sætte en anden baggrundsfarve på dine punktopstillinger og en anden baggrundsfarve på det område (uanset om det er i header eller i nav), hvor du har dine links liggende.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <a href="fonte.html">I morgen skal vi arbejde videre med tekst og fonte i CSS.</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <title>CSS Klasser</title>
+</head>
+<body>
+    <header>
+        <a href="tags.html">HTML intro</a>
+        <a href="index.html">CSS intro</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <h1>CSS klasser</h1>
+        <section>
+            <article>
+                <p>
+                    Som du kan se, arbejder jeg videre på den samme undervisnings webside. Det betyder, at hvis du vil have alle menupunkterne med på de nye sider, så skal du kopiere koden imellem header-tags'ene til alle sider.
+                </p>
+                <p>
+                    Indtil videre har vi lavet CSS-kode, som rammer alle tags af en bestemt type - fx alle h1-tags.
+                </p>
+                <p>
+                    Hvis man ønsker, at en CSS styling skal slå igennem på et eller flere elementer, men ikke på alle elementer af samme type, kan man anvende CSS klasser.
+                </p>
+                <p>
+                    Du skal selv navngive din CSS-klasse i dit stylesheet. Sørg for at bruge et navn, som giver god mening, så du nemt kan se - både i din HTML-fil og din CSS-fil - hvad denne klasse gør.
+                </p>
+
+                <p>
+                    <!-- I koden nedenfor er < erstattet med &lt; (less than) og > erstatted med &gt; (greater than), for ellers ville browseren bare vise en h1'er. For eksemplets skyld ville jeg gerne i browseren have vist teksten: <h1 class="red">Overskrift</h1> -->
+
+                    &lt;h1 class="red"&gt;Overskrift&lt;/h1&gt;
+                </p>
+                
+                <p>
+                    For at give dette HTML-element en klasse bruges koden: class="red". Du skal så tilsvarende lave din styling på .red i dit stylesheet.
+                </p>
+
+                <p>
+                    I CSS skrives klassen med et punktum først, og derudover defineres den på samme måde, som en almindelig CSS-selector:
+                    <ul class="code">
+                        <li>.red</li>
+                        <li>{
+                            <ul>
+                                <li>color: red;</li>
+                            </ul>
+                        </li>
+                        <li>}</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Klassen "red" kan genbruges på alle de elementer, hvor du gerne vil have den CSS-kode til at slå igennem. Så du kan også lave en &lt;p class="red"&gt;, og så vil al tekst i den paragraph være rød.
+                </p>
+
+                <p>
+                    Hvis du har kigget koden igennem på denne side, vil du se, at jeg har brugt en klasse, der hedder "code". Den bruger jeg til at fjerne punkttegn og indrykke kode, når jeg skriver kodeeksempler. Det gør jeg med følgende kode i min CSS:
+                </p>
+
+                <img src="img/CSS-class-descendant.JPG" alt="CSS classes and descendants">
+                <!-- Her er CSS-koden skrevet ind på din HTML-side, så du ikke behøver gå over i browseren for at se det
+                .code li
+                {
+                    list-style-type: none;
+                }
+            
+                .code li ul
+                {
+                    padding-left: 20px;
+                }
+                -->
+
+                <p>
+                    I eksemplet ovenfor har jeg sat klassen "code" på mit ul-tag. Herefter bruger jeg reglen om descendants, så jeg fortæller, at på alle li-tags, der ligger under min klasse "code", skal der ikke vises et punkttegn (list-style-type: none;). Herudover fortæller jeg, at på alle ul-tags, der ligger under et li-tag under min klasse "code", skal der være en padding til venstre på 20px (padding-left: 20px;).
+                </p>
+                <p>
+                    Prøv at kigge på min HTML-kode på denne side (der, hvor jeg har brugt klassen "code") og se, om du kan gennemskue, hvad jeg mener, når jeg skriver .code li og .code li ul. Hvis det ikke umiddelbart giver mening, så spørg mig, når jeg kommer forbi dig på et tidspunkt.
+                </p>
+                <p>
+                    Prøv at sætte koden på billedet (eller i HTML-kodekommentarerne) ovenfor ind i dit stylesheet til denne side. Så skulle kode-eksemplerne gerne ende med at se ud, som det billede, du kan se i browseren nedenfor:
+                </p>
+                <img src="img/CSS-class-browser-example.JPG" alt="CSS class browser example">
+
+                <h2>Pseudoklasser</h2>
+                <p>
+                    Pseudoklasser er CSS-klasser eller CSS-selectors, der kan befinde sig i forskellige stadier. Et eksempel på dette er links. Dem kan vi støde ind i i tre forskellige stadier: normal, hover og visited. Det normale stadie er, når vi ikke har klikket på linket endnu eller holde musen henover, så er linket bare et helt almindeligt link og bliver stylet med vores almindelige a-selector (se billedet i browseren nedenfor).
+                </p>
+                <img src="img/CSS-a-normal-state.JPG" alt="a-selector normal state">
+                
+                <p>
+                    Et af de andre stadier, vores link kan være i, er når vi holder musen henover det. Så er linket i det stadie, som hedder hover. Det stadie kan vi style på ved at bruge pseudoklassen hover. Alle pseudoklasser angives med et kolon først :hover. Så vi kan style på a:hover.
+                </p>
+                <p>
+                    Du skal nu herinde sætte teksten til at ændre farve på links, når du holder musen henover. Det gør du ved at skrive følgende kode (se billedet i browseren):
+                </p>
+                <img src="img/CSS-a-hover.JPG" alt="a:hover code">
+                
+                <p>
+                    Her kommer et eksempel på et link, hvor du kan teste, om det virker, når du holder musen henover: <a href="https://jv.dk" target="_blank">testlink</a>.
+                </p>
+                
+                <p>
+                    Det tredje stadie, som vores link kan være i, er visited. Dette stadie slår igennem, når vi har klikket på et link, så man kan se, hvilke links man har klikket på. Vi styler på vores besøgte links ved at bruge pseudoklassen visited og skrive a:visited i vores CSS-kode:
+                </p>
+                <img src="img/CSS-a-visited.JPG" alt="a:visited code">
+                <p>
+                    Skriv denne kode ind i dit stylesheet til denne side. Din a:visited kode skal stå over din a:hover kode, for ellers virker a:hover ikke, når du har klikket på et link (fordi CSS'en også læser sin kode kronologisk, så hvis a:hover står først, så vil den først sætte hover-farven og a:visited står til sidst, så vil den til sidst sætte a:visited-farven og det vil så være den, du ser).
+                </p>
+                
+                <p>
+                    Hvis du klikkede på testlinket et par afsnit højere oppe, skulle det nu gerne have skiftet farve til en mørkerød, men hvis du holder musen henover, så skifter den stadig til den anden lilla farve.
+                </p>
+                
+                <p>
+                    Hover bruges næsten altid til at fortælle brugeren, at "her er der noget, du kan klikke på". I forbindelse med a-tags bruges ofte et skift af skriftfarve. På billeder gør man ofte billedet en smule gennemsigtigt for at give en hover-effekt. Ved menupunkter (på horisontale menuer) kan man også bruge en baggrundsfarve.
+                </p>
+                
+                <h3>Hover på billeder</h3>
+                
+                <p>
+                    Man kan angive gennemsigtighed på et element ved at bruge attributten "opacity". En opacity på 1 angiver at elementet slet ikke er gennemsigtigt. En opacity på 0 angiver at elementet er helt gennemsigtigt. Husk, at kommatal i CSS skal skrives med punktum i stedet for komma - fx 0.8.
+                </p>
+
+                <p>
+                    For at sætte en opacity på billeder, som er links, når man hover over dem, skal man ramme alle img-tags som ligger inden i a-tags - og man skal ramme dem i det stadie, hvor man hover over dem.
+                </p>
+
+                <img src="img/CSS-hover-picture-links.JPG" alt="hover picture links">
+
+                <p>
+                    Hvis du kun skriver koden på img:hover, så vil den ramme alle dine billeder - også dem, der ikke er links. Så derfor skal du sørge for at have a-tagget med også, så du er sikker på, at effekten kun slår igennem på billeder, som er links.
+                </p>
+
+                <h3>Hover på menupunkter</h3>
+
+                <p>
+                    På denne side har jeg en menulinje, som er 50px høj og har farven tomato. Jeg har samtidigt en linjehøjde, som er 50px høj for at få min tekst til at stå midt i menulinjen. 
+                </p>
+
+                <p>
+                    (Hvis du har fulgt opgaverne her på undervisningssiden, så har du på et tidspunkt lavet alle billeder på siden 300px brede. Dette vil give lidt problemer for dig, når du skal se nogle af de næste billeder i browseren, så hvis du gerne vil kunne se de næste billeder i fuld bredde, skal du gå ind i stylesheetet til denne side og tilføje klassen .fullwidth - i klassen skriver du, at bredden skal være 100% (width: 100%;) og så vil alle de billeder, som skal vises i fuld bredde, blive ramt af den klasse. Jeg bruger den også på de efterfølgende sider til billeder, der er meget brede.)
+                </p>
+
+                <img src="img/Menu-linje-eksempel.JPG" alt="menu example" class="fullwidth">
+
+                <p>
+                    En af de måder, man kan angive en hover-effekt er ved at ændre baggrundsfarven bag linket, så man tydeligt kan se, at man holder musen henover.
+                </p>
+
+                <img src="img/Menu-linje-hover-eksempel.JPG" alt="menu hover example" class="fullwidth">
+
+                <p>
+                    Hvis jeg blot skriver header a:hover (eller nav a:hover) og sætter en baggrundsfarve på det (det kan fx være background-color: rgba(255, 255, 255, 0.3);), så vil i se, at baggrundsfarven kun lægger sig lige rundt om teksten:
+                </p>
+
+                <img src="img/Menu-linje-hover-noinlineblockorpadding.JPG" alt="menu hover example" class="fullwidth">
+
+                <p>
+                    For at få mit menupunkt til at fylde hele højden ud i min menulinje (det overliggende element), skal jeg sætte mine links til at blive vist som inline-block:
+                </p>
+
+                <img src="img/Menu-linje-displayinlineblock.JPG" alt="display inline-block">
+
+                <p>
+                    Dette gør, at min baggrundsfarve nu fylder ud i hele højden:
+                </p>
+
+                <img src="img/Menu-linje-eksempel-inlineblock.JPG" alt="display inline-block" class="fullwidth">
+
+                <p>
+                    Baggrundsfarven står stadig lidt tæt op ad mit menupunkt på højre og venstre side. Dette kan jeg ændre ved at lave min margin i koden om til padding i stedet for (med padding giver jeg luft omkring elementet men på indersiden af elementet, så i dette tilfælde vil det gøre mit a-element større til højre og venstre side):
+                </p>
+
+                <img src="img/Menu-linje-padding.JPG" alt="menu line padding">
+
+                <p>
+                    Hvis du sammenligner de to kodeblokke, kan du se, at jeg i linje 4 har ændret margin til padding. Så i stedet for at sætte luft udenom mit element, laver jeg nu luft inden i mit element i stedet for, og det gør, at baggrundsfarven nu viser, at elementet er blevet bredere i begge sider:
+                </p>
+
+                <img src="img/Menu-linje-hover-eksempel.JPG" alt="menu line hover example" class="fullwidth">
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        Her står et eller andet klogt.... måske!
+    </footer>
+
+</body>
+</html>

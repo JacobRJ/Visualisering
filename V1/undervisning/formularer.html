@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eksternt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <title>HTML formularer</title>
+</head>
+<body>
+    <header>
+        <a href="tags.html">HTML intro</a>
+        <a href="index.html">CSS intro</a>
+        <a href="colors.html">CSS farver</a>
+        <a href="fonte.html">CSS tekst</a>
+        <a href="margins.html">CSS margener</a>
+        <a href="selectors.html">CSS selectors</a>
+        <a href="klasser.html">CSS klasser</a>
+        <a href="position.html">CSS positioning</a>
+        <a href="menuer.html">CSS menuer</a>
+        <a href="formularer.html">HTML formularer</a>
+    </header>
+
+    <main>
+        <h1>HTML Formularer</h1>
+        <section>
+            <article>
+                <p>
+                    HTML formularer indeholder et overordnet <code>&lt;form&gt;</code> tag. Inden i selve formularområdet placerer man de forskellige formular-felter. Herudover skal din formular indeholde en submit-knap, som indsender formular-indholdet og videredirigerer en til en evt. landingsside (eller reloader den nuværende side, som formularen ligger på).
+                </p>
+                <p>
+                    Du opretter en ny formular ved at skrive:<br>
+                    <code>
+                        &lt;form method="post" action="formlandingpage.html"&gt;<br>
+                        <br>
+                        &lt;/form&gt;
+                    </code>
+                </p>
+                <p>
+                    I attributten action skrives navnet på den side, som man skal ledes videre til, når man har trykket på sin Submit-knap. I attributten method skrives enten "post" eller "get".                   
+                </p>
+
+                <p>
+                    De to metoder "post" og "get" adskilles ved, hvordan den næste side vises. Hvis man bruge metoden "get", så vil alle formularfelterne og deres indhold blive vist i den næste sides URL:
+                </p>
+               
+                <img src="img/Form-get-url.JPG" alt="URL for GET method" class="fullwidth">
+                <p>
+                    Hvis man bruger "post" metoden, så vil formularfelterne og deres indhold ikke blive vist i den næste sides URL. Med mindre du har en meget god grund til, at man skal kunne se, hvad brugerne har indtastet i formularfeltet, så er det en god idé at gemme, hvad brugerne har indtastet, så du skal i næsten alle tilfælde bruge metoden "post". Hvis du ikke skriver nogen metode ind, så bruger den som default metoden "get", så du skal huske at skrive metoden ind, hvis du skal bruge "post".
+                </p>
+
+                <p>
+                    Nogle af de mest brugte formular-felter i almindelige formularer er: tekstfelter, dropdown bokse, tekstområder og submit-knappen.
+                </p>
+
+                <p>
+                    Alle formularfelter skal have udfyldt deres name-attribut. Hvis der ikke er en name-attribut på hvert formularfelt, så virker det ikke. Du angiver navnet på formularfeltet ved at skrive name="feltnavn" i feltets HTML-tag. Se eksempler nedenfor.
+                </p>
+
+                <p>
+                    Et tekstfelt (tekst på en linje) skrives <code>&lt;input type="text" name="fornavn"&gt;</code><br>
+                    Feltet her hedder "fornavn", så på den måde kan man altid henvise til lige præcis dette felt, hvis man har brug for det.
+                </p>
+
+                <p>
+                    Udover at være type="text" kan et input felt også være type="email", så bliver brugerens indtastning også valideret på, om det har et korrekt mail-format.<br>
+                    Det kan også være type="password", så bliver brugerens indtastning skjult.<br>
+                    Det kan også være type="date", så får brugeren en kalender op, som de kan vælge datoen i.<br>
+                    Der er adskillige andre input typer, som kan anvendes, men som ikke bliver brugt så tit. Du kan læse mere om input typer på <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">w3schools</a>.
+                </p>
+
+                <p>
+                    Et tekstområde (tekst med flere linjer) skrives: <code>&lt;textarea&gt;</code><br>
+                    Du kan også angive hvor mange kolonner og linjer, tekstfeltet skal være (tekstfeltets størrelse) med cols og rows:<br>
+                    <code>&lt;textarea cols="50" rows="4"&gt;</code><br>
+                    Størrelsen på tekstfeltet kan også angives i din CSS, hvis du styler på din textarea-selector.
+                </p>
+
+                <p>
+                    En dropdown-box skrives med HTML-tagget <code>&lt;select&gt;</code><br>
+                    Herudover skal dropdown-boksen også have et navn: <code>&lt;select name="kategori"&gt;</code><br>
+                    En dropdown-box skal altid afsluttes med et <code>&lt;/select&gt;</code> og imellem de to select-tags skrives alle de værdier, som skal ligge i dropdown boksen.
+                </p>
+
+                <p>
+                    <code>&lt;select name="kategori"&gt;<br>
+                    &lt;option value="salg"&gt;Salg&lt;/option&gt;<br>
+                    &lt;option value="support"&gt;Support&lt;/option&gt;<br>
+                    &lt;option value="abonnement"&gt;Abonnement&lt;/option&gt;<br>
+                    &lt;option value="andet"&gt;Andet&lt;/option&gt;<br>
+                    &lt;/select&gt;
+                    </code>
+                </p>
+                <form method="post">
+                    <select name="kategori">
+                        <option value="salg">Salg</option>
+                        <option value="support">Support</option>
+                        <option value="abonnement">Abonnement</option>
+                        <option value="andet">Andet</option>
+                    </select> 
+                </form>
+                <p>
+                    Attributten value indeholder den værdi, som bliver overført, når din formular bliver submittet. Det, der står imellem de to option tags er det, som brugeren kan se i dropdown-boksen.
+                </p>
+
+                <h2>Submit knappen</h2>
+
+                <p>
+                    Din formular skal indeholde en submit-knap. Det er submit-knappen, der indsender formularen og sender brugeren videre til den landingsside, som du har angivet i din action-attribut i dit form-tag. Hvis du ikke har angivet en landingsside, så bliver den side, som formularen ligger på, reloadet.
+                </p>
+                <p>
+                    Du skriver din submitknap på følgende måde: <code>&lt;input type="submit" value="Indsend" name="submit"&gt;</code>
+                </p>
+                <p>
+                    Attributten type angiver, at dette er en submit-knap. Attributten value angiver, hvad der står på submit-knappen, som brugeren kan se. Attributten name er navnet på formular-elementet.
+                </p>
+
+                <h2>Felt labels</h2>
+
+                <p>
+                    Man kan angive labels til sine formularfelter ved blot at skrive navnet i almindelig HTML-kode. Det er dog et bedre valg at bruge HTML-tagget <code>&lt;label&gt;</code>, fordi det gør, at skærmlæsere ved, at label'en hænger sammen med et bestemt formularfelt, og det gør din side mere tilgængelig for flere brugere (også dem, der bruger skærmlæsere).
+                </p>
+
+                <p>
+                    Du sætter en label ind for et felt ved at angive navnet på dit formularfelt i din label. Imellem dit start og slut label-tag, skriver du det, som brugerne skal kunne se på skærmen:
+                </p>
+                <p>
+                    <code>
+                        &lt;label for="fornavn"&gt;Fornavn:&lt;/label&gt;<br>
+                        &lt;input type="text" name="fornavn"&gt;
+                    </code>
+                </p>
+                <form>
+                    <label for="fornavn">Fornavn:</label>
+                    <input type="text" name="fornavn">
+                </form>
+
+                <h2>Andre attributter</h2>
+
+                <h3>Required</h3>
+                <p>
+                    Du kan angive at et formularfelt skal udfyldes ved at bruge attributten <code>required</code>:<br>
+                    <code>&lt;input type="email" required&gt;</code><br>
+                    Det giver bl.a. en stjerne ved siden af feltet, og brugeren får en fejl, hvis feltet ikke er udfyldt, når brugeren trykker på submit-knappen.
+                </p>
+
+                <h3>Disabled</h3>
+
+                <p>
+                    Du kan angive, at et formularfelt er disabled (vises som greyed out) ved at bruge attributten <code>disabled</code>:<br>
+                    <code>&lt;input type="kundenr" disabled&gt;</code>
+                </p>
+
+                <h3>Placeholder</h3>
+
+                <p>
+                    Med placeholder kan du angive en eksempel-værdi, som vil stå i feltet, når brugeren kommer ind på siden. Så snart brugeren sætter sin cursor i feltet, forsvinder placeholderen. Placeholderen kan hjælpe brugeren med at forstå, hvad man skal skrive i feltet:
+                    <code>&lt;input type="email" name="mail" placeholder="name@mail.dk"&gt;</code>
+                </p>
+                <form method="post">
+                    <label for="mail">E-mail: </label>
+                    <input type="email" name="mail" placeholder="name@mail.dk">
+                </form>
+
+                <h3>Flere attributter</h3>
+
+                <p>
+                    På <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">w3schools</a> kan du se flere attributter, som kan angives på dine input felter.
+                </p>
+
+                <h2>Videre med dit fugleleksikon</h2>
+                
+                <p>
+                    Gå videre med de opgaver, som står under "Opgaver som laves, når du har læst siden HTML formularer".
+                </p>
+                
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        A clean house is the sign of a broken computer!
+    </footer>
+
+</body>
+</html>
