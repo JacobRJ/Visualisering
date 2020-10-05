@@ -20,6 +20,12 @@ h1, h2
     color: midnightblue;
 }
 
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
 li
 {
     color: steelblue;
