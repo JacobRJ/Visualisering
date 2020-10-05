@@ -7,7 +7,9 @@ body
 
 nav
 {
+    text-align: center;
     background-color: hsl(240, 64%, 27%);
+    height: 30px;
 }
 
 nav a
