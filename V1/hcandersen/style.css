@@ -1,5 +1,6 @@
 body
 {
+    background-color: hsl(0, 0%, 10%);
     color: hsl(180, 25%, 25%);
     margin-left: 5%;
     margin-right: 5%;
@@ -14,7 +15,7 @@ nav
 
 nav a
 {
-    color: hsl(150, 100%, 98%);
+    color: hsl(240, 100%, 95%);
     text-decoration: none;
     padding: 6px;
 }
