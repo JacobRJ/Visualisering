@@ -15,6 +15,7 @@ nav
 nav a
 {
     color: hsl(150, 100%, 98%);
+    text-decoration: none;
 }
 
 h1, h2
