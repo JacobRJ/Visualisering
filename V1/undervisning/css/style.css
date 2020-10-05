@@ -1,0 +1,32 @@
+body
+{
+    color: darkslategray;
+    background-color: gainsboro;
+}
+
+header, footer
+{
+    background-color: tomato;
+    height: 50px;
+}
+
+header a, footer a
+{
+    color: gainsboro;
+    text-decoration: none;
+}
+
+h1
+{
+    color: midnightblue;
+}
+
+h2
+{
+    color: steelblue;
+}
+
+h1, h2
+{
+    background-color: azure;
+}
