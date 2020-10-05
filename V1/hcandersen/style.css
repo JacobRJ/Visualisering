@@ -1,23 +1,23 @@
 body
 {
-    color: darkslategrey;
+    color: hsl(180, 25%, 25%);
     margin-left: 5%;
     margin-right: 5%;
 }
 
 nav
 {
-    background-color: midnightblue;
+    background-color: hsl(240, 64%, 27%);
 }
 
 nav a
 {
-    color: mintcream;
+    color: hsl(150, 100%, 98%);
 }
 
 h1, h2
 {
-    color: midnightblue;
+    color: hsl(240, 64%, 27%);
 }
 
 img
@@ -28,5 +28,5 @@ img
 
 li
 {
-    color: steelblue;
+    color: hsl(207, 44%, 49%);
 }
