@@ -1,7 +1,7 @@
 body
 {
-    background-color: hsl(221, 58%, 38%);
-    color: hsl(240, 10%, 67%);
+    background-color: hsl(24, 80%, 86%);
+    color: hsl(240, 27%, 36%);
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 0px;
@@ -10,20 +10,20 @@ body
 nav
 {
     text-align: center;
-    background-color: hsl(240, 61%, 48%);
-    height: 30px;
+    background-color: hsl(5, 43%, 56%);
+    min-height: 30px;
 }
 
 nav a
 {
-    color: hsl(240, 10%, 67%);
+    color: hsl(240, 27%, 36%);
     text-decoration: none;
     padding: 6px;
 }
 
 h1, h2
 {
-    color: hsl(240, 1%, 51%);
+    color: hsl(240, 27%, 36%);
 }
 
 img
@@ -34,7 +34,7 @@ img
 
 li
 {
-    color: hsl(240, 10%, 67%);
+    color: hsl(240, 27%, 36%);
 }
 
 a
