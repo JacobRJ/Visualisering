@@ -10,10 +10,16 @@ body
     /* start of font, weight and size */
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
+    line-height: 2rem;
 }
 
 h1 h2 h3{
     font-family: 'Overpass', sans-serif;
+    line-height: 4rem;
+}
+
+h1 h2{
+    text-shadow: -2px;
 }
 
 h2 h3{
@@ -23,6 +29,8 @@ h2 h3{
 h1{
     font-weight: 700;
     font-size: 3rem;
+    /* centering h1 */
+    text-align: center;
 }
 
 h2{
@@ -47,6 +55,7 @@ nav a
     color: hsl(240, 27%, 36%);
     text-decoration: none;
     padding: 6px;
+    text-transform: uppercase;
 }
 /* end of nav */
 
@@ -60,5 +69,5 @@ img
 a
 {
     /* links */
-    color: hsl(240, 10%, 67%);
+    color: hsl(240, 64%, 27%);
 }
