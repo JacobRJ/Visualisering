@@ -25,6 +25,7 @@ main{
 h1 h2 h3{
     font-family: 'Overpass', sans-serif;
     line-height: 4rem;
+    margin: 5px;
 }
 
 h1 h2{
@@ -85,4 +86,8 @@ a
 
 li{
     list-style-position: inside;
+}
+
+p{
+    margin: 5px;
 }
