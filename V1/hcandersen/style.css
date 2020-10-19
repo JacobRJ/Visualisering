@@ -1,16 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body
 {
     /* coloring the background and text */
     background-color: hsl(24, 80%, 86%);
     color: hsl(240, 27%, 36%);
-    /* margins for body */
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 0px;
-    /* start of font, weight and size */
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     line-height: 2rem;
+}
+
+header{
+    margin-bottom: 20px;
+}
+
+main{
+    margin: 0 auto;
+    width: 1000px;
 }
 
 h1 h2 h3{
@@ -40,7 +49,6 @@ h2{
 h3{
     font-size: 1,5rem;
 }
-/* end of font */
 
 /* start of nav */
 nav
@@ -73,4 +81,8 @@ a
 {
     /* links */
     color: hsl(240, 64%, 27%);
+}
+
+li{
+    list-style-position: inside;
 }
