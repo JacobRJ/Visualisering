@@ -8,18 +8,27 @@ body
 {
     color: darkslategray;
     background-color: gainsboro;
+    line-height: 1.8rem;
 }
 
 header, footer
 {
+    text-align: center;
     background-color: tomato;
     height: 50px;
+    line-height: 50px;
 }
 
 header a, footer a
 {
     color: gainsboro;
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+main{
+    width: 1000px;
+    margin: 0 auto;
 }
 
 h1
@@ -35,4 +44,19 @@ h2
 h1, h2
 {
     background-color: azure;
+    margin: 20px 0px;
+}
+
+img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+p{
+    margin-bottom: 40px;
+}
+
+li{
+    list-style-position: inside;
 }
