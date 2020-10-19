@@ -24,6 +24,6 @@ nav li a{
     color: #ffffff;
 }
 
-li a:hover{
+nav li a:hover{
     background-color: #111111;
 }
