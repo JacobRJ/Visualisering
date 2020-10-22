@@ -91,18 +91,10 @@ li{
 
 .headerquote{
     background-color: hsla(0, 0%, 0%, 0.1);
-    margin: 1rem 0;
-    padding: 1rem;
-    font-style: italic;
     font-size: 20px;
-    border-left: 1px solid grey;
 }
 
-p.headerquote{
-    margin: 1rem 0;
-}
-
-.quote{
+.headerquote, .quote{
     margin: 1rem 0;
     padding: 1rem;
     font-style: italic;
