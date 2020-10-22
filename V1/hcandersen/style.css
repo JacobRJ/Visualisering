@@ -83,6 +83,7 @@ a
     /* links */
     color: hsl(240, 64%, 27%);
 }
+
 /* making the list items be on the inside of their current margin */
 li{
     list-style-position: inside;
