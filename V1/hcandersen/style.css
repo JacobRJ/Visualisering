@@ -83,7 +83,20 @@ a
     /* links */
     color: hsl(240, 64%, 27%);
 }
-
+/* making the list items be on the inside of their current margin */
 li{
     list-style-position: inside;
+}
+
+.headerquote{
+    background-color: hsla(0, 0%, 0%, 0.1);
+    margin: 1rem 0;
+    padding: 1rem;
+    font-style: italic;
+    font-size: 20px;
+    border-left: 1px gray;
+}
+
+p.headerquote{
+    margin: 1rem 0;
 }
