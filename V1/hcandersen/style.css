@@ -15,9 +15,9 @@ body
 
 header{
     margin-bottom: 20px;
-    /* position: sticky;
+    position: sticky;
     top: 0;
-    width: 100%; */
+    width: 100%;
 }
 
 main{
