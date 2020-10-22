@@ -100,3 +100,11 @@ li{
 p.headerquote{
     margin: 1rem 0;
 }
+
+.quote{
+    margin: 1rem 0;
+    padding: 1rem;
+    font-style: italic;
+    border-left: 1px;
+    border-color: gray;
+}
