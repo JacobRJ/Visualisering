@@ -94,7 +94,7 @@ li{
     padding: 1rem;
     font-style: italic;
     font-size: 20px;
-    border-left: 1px gray;
+    border-left: 1px solid grey;
 }
 
 p.headerquote{
@@ -105,6 +105,5 @@ p.headerquote{
     margin: 1rem 0;
     padding: 1rem;
     font-style: italic;
-    border-left: 1px;
-    border-color: gray;
+    border-left: 1px solid grey;
 }
