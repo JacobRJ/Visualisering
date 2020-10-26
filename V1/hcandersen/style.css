@@ -51,10 +51,15 @@ h3{
 
 header{
     margin-bottom: 20px;
-    position: sticky;
     z-index: 1;
     top: 0;
     width: 100%;
+}
+
+@media screen and (min-width: 1000px){
+    header{
+        position: sticky;
+    }
 }
 
 nav{
