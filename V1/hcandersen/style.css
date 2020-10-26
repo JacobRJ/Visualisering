@@ -159,3 +159,21 @@ li{
     font-size: 2.5rem;
     padding: 1rem;
 }
+/* styling kontakt form */
+.formfield{
+   width: 12rem;
+}
+
+label.genderlabel{
+    width: 4rem;
+}
+
+label.textarealabel{
+    vertical-align: top;
+}
+
+label, .labelspace{
+    padding: 0.8rem 0.8rem 0.8rem 0;
+    display: inline-block;
+    width: 8rem;
+}
