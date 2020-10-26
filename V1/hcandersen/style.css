@@ -13,14 +13,6 @@ body
     line-height: 2rem;
 }
 
-header{
-    margin-bottom: 20px;
-    position: sticky;
-    z-index: +1;
-    top: 0;
-    width: 100%;
-}
-
 main{
     margin: 0 auto;
     width: 1000px;
@@ -57,10 +49,20 @@ h3{
 
 /* start of nav */
 
+header{
+    margin-bottom: 20px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
+nav{
+    position: relative;
+}
+
 nav ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: hsl(5, 43%, 56%);
     text-align: center;
@@ -80,6 +82,21 @@ nav ul li a{
 
 nav ul li:hover{
     background-color: hsla(0, 0%, 0%, 0.1);
+}
+
+nav ul ul{
+    position: absolute;
+    visibility: hidden;
+    top: 2.6rem;
+    z-index: 1;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+}
+
+nav ul ul li{
+    display: block;
 }
 
 /* end of nav */
