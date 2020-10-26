@@ -177,3 +177,6 @@ label, .labelspace{
     display: inline-block;
     width: 8rem;
 }
+input[type=submit]{
+    cursor: pointer;
+}
