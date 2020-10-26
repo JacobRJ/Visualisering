@@ -48,14 +48,13 @@ h3{
 }
 
 /* start of nav */
-
 header{
     margin-bottom: 20px;
     z-index: 1;
     top: 0;
     width: 100%;
 }
-
+/* if screen is more than 1000px wide header becomes sticky */
 @media screen and (min-width: 1000px){
     header{
         position: sticky;
