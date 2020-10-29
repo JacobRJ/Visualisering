@@ -45,8 +45,9 @@ nav ul a, .mobilenav ul a{
     text-transform: uppercase;
 }
 
+/* desktop specific styling */
 @media screen and (min-width: 600px){
-
+    /* desktop navigation */
     .mobilenav{
         display: none;
     }
@@ -81,7 +82,7 @@ nav ul a, .mobilenav ul a{
     nav ul li a{
         color: rgb(224, 224, 224);
     }
-
+    /* desktop margin */
     main{
         max-width: 800px;
         margin: 0 auto;
