@@ -65,7 +65,6 @@ nav ul a, .mobilenav ul a{
 
     nav{
         background-color: rgb(95, 95, 95);
-        padding: 0.5rem 0;
         position: sticky;
         top: 0;
     }
@@ -76,8 +75,12 @@ nav ul a, .mobilenav ul a{
 
     nav ul li{
         display: inline-block;
-        padding: 0.5rem;
+        padding: 1rem;
         margin: 0 0.5rem;
+    }
+
+    nav ul li:hover{
+        background-color: hsla(0, 0%, 0%, 0.3);
     }
 
     nav ul li a{
