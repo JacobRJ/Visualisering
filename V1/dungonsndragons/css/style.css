@@ -75,7 +75,7 @@ nav ul a, .mobilenav ul a{
 
     nav ul li{
         display: inline-block;
-        padding: 1rem;
+        
         margin: 0 0.5rem;
     }
 
@@ -85,6 +85,8 @@ nav ul a, .mobilenav ul a{
 
     nav ul li a{
         color: rgb(224, 224, 224);
+        display: block;
+        padding: 1rem;
     }
     /* desktop margin */
     main{
