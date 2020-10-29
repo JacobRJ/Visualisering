@@ -8,19 +8,20 @@ header{
 }
 
 .mobilenav{
+    margin: 0;
     width: 2rem;
     height: auto;
     position: fixed;
-    top: 0;
+    top: 0.2rem;
     right: 0.2rem;
 }
 /* mobile dropdown content */
 .mobilenav-content{
     position: absolute;
-    top: 3.2rem;
+    top: 2.2rem;
     right: 0rem;
     visibility: hidden;
-    background-color: hsla(0, 0%, 100%, 0.5);
+    background-color: hsla(0, 0%, 100%, 0.63);
 }
 
 .mobilenav:hover .mobilenav-content{
