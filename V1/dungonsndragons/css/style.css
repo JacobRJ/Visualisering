@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* mobile nav styling */
 header{
     display: none;
 }
@@ -11,8 +11,23 @@ header{
     width: 2rem;
     height: auto;
     position: fixed;
-    top: 0.2rem;
+    top: 0;
     right: 0.2rem;
+}
+/* mobile dropdown content */
+.mobilenav-content{
+    position: absolute;
+    top: 3.2rem;
+    visibility: hidden;
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.mobilenav:hover .mobilenav-content{
+    visibility: visible;
+}
+
+nav ul, .mobilenav ul{
+    list-style-type: none;
 }
 
 p, img, h2{
@@ -28,4 +43,5 @@ h1{
     text-align: center;
     padding: 1rem;
     font-size: 2rem;
+    text-shadow: grey -1px -1px;
 }
