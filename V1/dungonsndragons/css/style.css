@@ -48,11 +48,15 @@ nav ul a, .mobilenav ul a{
 
     header{
         display: contents;
+        position: relative;
+        top: 0;
     }
 
     nav{
         background-color: rgb(95, 95, 95);
         padding: 0.5rem 0;
+        position: sticky;
+        top: 0;
     }
 
     nav ul{
