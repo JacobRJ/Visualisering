@@ -16,6 +16,7 @@ nav ul li{
 
 nav{
     background-color: hsl(19, 80%, 29%);
+    position: relative;
 }
 
 nav ul li:hover{
@@ -32,6 +33,11 @@ nav a{
 /* desktop design */
 @media screen and (min-width: 1000px){
     /* navigation */
+    header{
+        position: sticky;
+        top: 0;
+    }
+
     .navgrid-container {
     display: grid;
     grid-template-columns: 25% 50% 25%;
