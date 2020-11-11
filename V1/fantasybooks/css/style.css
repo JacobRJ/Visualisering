@@ -49,9 +49,13 @@ h2{
     line-height: 2rem;
 }
 
+article{
+    margin: 1rem 0;
+}
+
 main, footer{
     max-width: 1200px;
-    margin: auto;
+    margin: 1.5rem auto;
 }
 
 /* Grid items */
