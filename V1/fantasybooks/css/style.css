@@ -31,13 +31,13 @@ nav a{
     font-size: 1.1rem;
 }
 
-/* main */
+/* overall page design */
 body{
     background-color: hsl(31, 35%, 83%);
     color: hsl(280, 74%, 26%);
 }
 
-main{
+main, footer{
     max-width: 1000px;
     margin: auto;
 }
@@ -46,10 +46,28 @@ main{
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    padding: 0.6rem;
 }
 
 .grid-item {
     text-align: center;
+    padding: 0.2rem;
 }
 
+/* footer grid */
+
+.footgrid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.footgrid-item{
+    text-align: start;
+}
+
+footer img{
+    width: 1.5rem;
+    height: auto;
+    margin: 0 0.6rem;
+}
