@@ -7,7 +7,6 @@
 .navgrid-container {
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    padding: 10px;
 }
 
 .navgrid-item {
@@ -18,10 +17,16 @@ nav ul li{
     list-style: none;
     list-style-position: inside;
     display: inline-block;
+    text-align: center;
+    padding: 0.5rem 0.9rem;
 }
 
 nav{
     background-color: hsl(19, 80%, 29%);
+}
+
+nav ul li:hover{
+    background-color: hsl(19, 87%, 26%);
 }
 
 nav a{
