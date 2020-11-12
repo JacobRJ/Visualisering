@@ -68,8 +68,9 @@ nav a{
     text-align: start;
     }
 
+    /* making images bigger when on desktop */
     main img{
-        max-width: 100%;
+        max-width: 18rem;
     }
 }
 
@@ -84,6 +85,7 @@ body{
 h1{
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
+    line-height: 3rem;
 }
 
 h2{
@@ -95,7 +97,7 @@ img{
     max-width: 13rem;
 }
 
-article{
+article, p{
     margin: 1rem 0;
 }
 
