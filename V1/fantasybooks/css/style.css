@@ -14,7 +14,7 @@ nav ul li{
     padding: 0.5rem 0.9rem;
 }
 
-nav{
+nav, footer{
     background-color: hsl(19, 80%, 29%);
     position: relative;
 }
@@ -92,7 +92,7 @@ body{
     font-size: 1rem;
 }
 
-main, footer{
+main{
     max-width: 1000px;
     margin: 1.5rem auto;
 }
