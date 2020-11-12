@@ -47,21 +47,21 @@ nav a{
     text-align: center;
     }
     /* Grid items */
-    .grid-container {
+    .grid-container,main .storegrid-container{
     display: grid;
     grid-template-columns: auto auto auto;
     }
 
-    .grid-item {
+    .grid-item,main .storegrid-item{
     text-align: center;
-    padding: 1rem;
+    border: 1px solid gray;
+    margin: 0.5rem;
     }
 
     /* footer grid */
     .footgrid-container{
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
     }
 
     .footgrid-item{
@@ -74,12 +74,27 @@ nav a{
     }
 }
 
+/* grid in the store */
+.storegrid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.storegrid-item{
+    text-align: center;
+}
+
 /* overall page design */
 body{
     background-color: hsl(31, 35%, 83%);
     color: hsl(280, 74%, 26%);
     font-family: 'Noto Serif', serif;
     font-size: 1rem;
+}
+
+main, footer{
+    max-width: 1000px;
+    margin: 1.5rem auto;
 }
 
 h1{
@@ -94,16 +109,11 @@ h2{
 }
 
 img{
-    max-width: 13rem;
+    max-width: 10rem;
 }
 
 article, p{
     margin: 1rem 0;
-}
-
-main, footer{
-    max-width: 1200px;
-    margin: 1.5rem auto;
 }
 
 footer img{
