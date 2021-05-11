@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+p{
+    margin-bottom: 1rem;
+}
+
+article{
+    margin: 1rem;
+
+}
+
+h1 a + p, h2 a + p{
+    font-style: italic;
+}
+
+body{
+    line-height: 1.5;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    margin-right: 1rem;
+}
+
+a img:hover{
+    opacity: 0.7;
+}
+
+h1, h2, h3{
+    font-family: 'Overpass', sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h1, h2{
+    margin: 1rem 0;
+}
+
+nav{
+    background-color: darkslategray;
+    height: 50px;
+    line-height: 50px;
+}
