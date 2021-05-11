@@ -21,7 +21,7 @@ article{
 
 }
 
-h1 a + p, h2 a + p{
+h1 ~ p:first-of-type, h2 ~ p:first-of-type{
     font-style: italic;
 }
 
