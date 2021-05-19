@@ -14,6 +14,14 @@ body
     height: 100vh;
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 100px 40px auto 40px;
+    grid-template-areas:
+    "header header header header header header header"
+    "menu1 menu2 menu3 menu4 menu5 menu6 menu7"
+    "side main main main main main main"
+    "footer footer footer footer footer footer footer";
 }
 
 /* Header styling */
@@ -21,7 +29,7 @@ body
 header
 {
     background-color: #CCCCCC;
-    height: 100px;
+    grid-area: header;
 }
 
 header img
@@ -36,77 +44,91 @@ header img:last-of-type
 
 /* General menu styling - applies to both menus (and footer for some properties) */
 
-nav ul
+nav ul,body li
 {
     list-style-type: none;
-    line-height: 40px;
 }
 
-nav ul a
-{
-    padding: 0 2em;
-}
-
-nav ul a, footer a
+li a, footer a
 {
     text-decoration: none;
     color: white;
 }
 
-nav ul li:hover
+li:hover
 {
     background-color: #CCCCCC;
 }
 
-nav ul li:hover a
+li:hover a
 {
     color: rgba(50, 54, 84, 0.8);
 }
 
 /* Top navigation styling (and some also apply for footer) */
 
-nav.top, footer
+body>li:nth-of-type(1){
+    grid-area: menu1;
+}
+
+body>li:nth-of-type(2){
+    grid-area: menu2;
+}
+
+body>li:nth-of-type(3){
+    grid-area: menu3;
+}
+
+body>li:nth-of-type(4){
+    grid-area: menu4;
+}
+
+body>li:nth-of-type(5){
+    grid-area: menu5;
+}
+
+body>li:nth-of-type(6){
+    grid-area: menu6;
+}
+
+body>li:nth-of-type(7){
+    grid-area: menu7;
+}
+
+body>li, footer
 {
-    height: 40px;
     background-color: #565952;
     color: white;
 }
 
-nav.top ul li
+body>li
 {
-    display: inline-block;  
-}
-
-nav.top ul li a
-{
+    text-align: center;
     border-right: 1px solid white;
 }
 
-nav.top ul li:last-of-type a
+body>li a
 {
-    border-right: none;
+    line-height: 38px
 }
 
-nav.top ul li a::before
+body>li:last-of-type
 {
-    content: "🞂";
-    padding-right: 0.5rem;
-    color: rgba(50, 54, 84, 0.8);
+    border-right: none;
 }
 
 /* Side navigation styling */
 
 nav.side
 {
-    float: left;
-    height: calc(100% - 180px);
-    width: 15%;
     background-color: #CCCCCC;
+    grid-area: side;
 }
 
-nav.side ul
+nav.side ul li
 {
-    background-color: rgba(50, 54, 84, 0.8);
+    background-color: rgba(50, 54, 84, 0.8) !important;
+    line-height: 40px;
 }
 
 nav.side ul li a
@@ -125,38 +147,41 @@ nav.side ul li:last-of-type a
 
 footer
 {
-    position: absolute;
     bottom: 0;
     width: 1200px;
     text-align: center;
     line-height: 40px;
+    grid-area: footer;
 }
 
 /* Styling of content area */
 
 main
 {
-    /* 18% padding on left side to account for the sidebar nav that is 15% wide */
-    padding: 2em 2em 2em 18%; 
+    grid-area: main;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-row: auto;
+    grid-template-areas: 
+    "main1 main2";
 }
 
 /* Section size and positioning */
 
 section
 {
-    width: 45%;
-    height: 100%;
     font-size: small;
+    margin: 2rem;
 }
 
 section:first-of-type
 {
-    float: left;
+    grid-area: main1;
 }
 
 section:last-of-type
 {
-    float: right;
+    grid-area: main2;
 }
 
 /* Article styling */
