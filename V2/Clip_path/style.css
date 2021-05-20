@@ -1,0 +1,125 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 4rem 1fr 2rem;
+    grid-template-rows: 4rem 1fr 2rem;
+        grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    min-height: 100vh;
+}
+
+header,footer{
+    background-color: rgb(2, 2, 177);
+    color: rgb(238, 226, 226);
+    text-align: center; 
+}
+
+header{
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    grid-area: header;     
+    line-height: 4rem;  
+}
+
+main{
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    grid-area: main;
+    background-color: cadetblue;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+}
+
+@media only screen and (min-width: 1000px){
+    main{
+        -ms-grid-columns: (1fr 1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    @media only screen and (min-width: 1500px){
+        main{
+            -ms-grid-columns: (1fr 1fr 1fr 1fr);
+            grid-template-columns: repeat(4,1fr);
+            padding: 2rem;
+        }
+
+        img{
+            margin-bottom: 0.5rem;
+            -webkit-clip-path:polygon(0% 0%, 100% 0%, 100% 85%, 0% 85%);
+                    clip-path:polygon(0% 0%, 100% 0%, 100% 85%, 0% 85%);
+        }
+
+        img:hover~h3,img:hover{
+            opacity: 0.7;
+        }
+
+        article:first-of-type img:hover{
+            -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 85%, 50% 100%, 30% 85%, 0% 85%);
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 85%, 50% 100%, 30% 85%, 0% 85%);
+        }
+
+        article:nth-of-type(2) img:hover{
+            -webkit-clip-path: circle(40% at 50% 50%);
+                    clip-path: circle(40% at 50% 50%);
+        }
+
+        article:nth-of-type(3) img:hover{
+            -webkit-clip-path: inset(10% 10% 20% 10% round 5%);
+                    clip-path: inset(10% 10% 20% 10% round 5%);
+        }
+
+        article:nth-of-type(4) img:hover{
+            -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 85%, 0% 85%, 25% 50%, 0% 0%);
+                    clip-path: polygon(75% 0%, 100% 50%, 75% 85%, 0% 85%, 25% 50%, 0% 0%);
+        }
+
+        main article h3{
+            width: auto;
+            background-color: inherit;
+            position: relative;
+            bottom: unset;
+        }
+    }
+}
+
+article{
+    text-align: center;
+    margin: 1rem;
+    position: relative;
+}
+
+article h3{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.521);
+    position: absolute;
+    bottom: 10%;
+    line-height: 2rem;
+}
+
+footer{
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    grid-area: footer;
+    line-height: 2rem;
+}
