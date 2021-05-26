@@ -111,7 +111,7 @@ nav ul li img{
 /* Separat styling for checkbox */
 nav .menu-btn, nav ul li .submenu-btn
 {
-    display: block;    
+    display: block;
     z-index: 7;
     opacity: 0;
     cursor: pointer;
@@ -155,7 +155,7 @@ main>span
     right: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;        
+    align-items: center;
 }
 
 /* Styling af selve til-top pil billedet */
