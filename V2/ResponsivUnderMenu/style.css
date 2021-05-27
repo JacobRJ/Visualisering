@@ -67,6 +67,7 @@ nav .menu-btn:checked ~ ul, nav ul li .submenu-btn:checked ~ ul{
 
 nav ul li{
     position: relative;
+    z-index: 6;
 }
 
 nav ul li .submenu-btn{
@@ -85,6 +86,8 @@ nav ul li h2
     font-size: 24px;
     cursor: pointer;
     padding: 0 2rem;
+    position: relative;
+    z-index: 5;
 }
 
 nav ul li a
