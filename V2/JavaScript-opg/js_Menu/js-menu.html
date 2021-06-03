@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        // an array consisting of keys and values assosiated with those keys
+        var menu = {
+            'home': 'home.html',
+            'products': 'products.html',
+            'pricing': 'pricing.html',
+            'vision': 'vision.html',
+            'about': 'about.html',
+            'contact': 'contact.html'
+        }
+
+        // creates the elements nav and ul
+        var nav = document.createElement('nav')
+        var ul = document.createElement('ul')
+        
+        nav.appendChild(ul) // places ul under nav
+
+        // for in loop to create all the items in the array menu
+        for (key in menu) {
+            // creates a new li and a element for every run
+            var li = document.createElement('li')
+            var a = document.createElement('a')
+
+            ul.appendChild(li) // places li under ul
+            li.appendChild(a) // places a under li
+            // creates the text for the a tag with the key from the array
+            var txt = document.createTextNode(key) 
+            // places that text in a
+            a.appendChild(txt) 
+            // makes the a tag link to the value of the current key in the array
+            a.href = (menu[key]) 
+        }
+
+        //places nav under body
+        document.querySelector('body').appendChild(nav)
+        // gives nav the class menu
+        document.querySelector('nav').classList.add('menu')
+    </script>
+</body>
+</html>
