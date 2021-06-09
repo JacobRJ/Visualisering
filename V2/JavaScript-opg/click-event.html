@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id="btn1">Click me</button>
+
+    <ul id="btn2">
+        <li>1</li>
+        <li>2</li>
+    </ul>
+
+    <div style="height: 300px; width: 300px; background-color: blue;">
+        <button id="btn3">Click me</button>
+    </div>
+    <script>
+        let btn1 = document.querySelector('#btn1')
+        btn1.addEventListener('click', function(){
+            console.log("Hello World");
+        });
+
+        let btn2 = document.querySelector('#btn2')
+        btn2.addEventListener('click', function(event) {
+            alert(event.target.innerHTML)
+        })
+
+        let btn3 = document.querySelector('#btn3')
+        btn3.addEventListener('click', function (event) {
+            // console.dir(event.target.parentElement.style.backgroundColor)
+            if (event.target.parentElement.style.backgroundColor == "blue") {
+                event.target.parentElement.style.backgroundColor = "red";
+            } else {
+                event.target.parentElement.style.backgroundColor = "blue";
+            }
+        })
+    </script>
+</body>
+</html>
