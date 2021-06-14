@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>opg 1</p>
+    <form name="form1" onsubmit="function1()" method="post" action="/action_page.php">
+        <input type="text" name="fname">
+        <input type="text" name="lname">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="output1"></p>
+    <p>opg 2</p>
+    <form name="form2" onsubmit="function2()" method="post" action="/action_page.php">
+        <input type="number" name="nr1">
+        <input type="number" name="nr2">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="output2"></p>
+    <p>opg 3</p>
+    <form name="form3" onsubmit="function3()" method="post" action="/action_page.php">
+        <input type="number" name="nr1">
+        <input type="submit" value="Submit">
+    </form>
+    <p>moms:</p>
+    <p id="output31"></p>
+    <p>pris med 10% rabat</p>
+    <p id="output32"></p>
+    <p>opg 4</p>
+    <form name="form4" onsubmit="function4()" method="post" action="/action_page.php">
+        <input type="text" name="email">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="output1"></p>
+
+    <script>
+        function function1() {
+            let x = document.forms["form1"]["fname"].value
+            var y = document.forms["form1"]["lname"].value
+            if (x != "" && y != "") {
+                var i = x + " " + y
+                document.querySelector("#output1").innerHTML = i
+            }
+        }
+
+        function function2() {
+            var x = Number(document.forms["form2"]["nr1"].value)
+            var y = Number(document.forms["form2"]["nr2"].value)
+            var i = x + y
+            document.querySelector("#output2").innerHTML = i
+        }
+
+        function function3() {
+            var x = Number(document.forms["form3"]["nr1"].value)
+            var i = x * 0.2
+            document.querySelector("#output31").innerHTML = i
+            var y = x * 0.9
+            document.querySelector("#output32").innerHTML = y
+        }
+
+        function function4() {
+            let regx = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+            var res = regx.test(document.forms['form4']['email'].value)
+            if (res) {
+                alert('Du Har indtastet en gyldig email')
+            } else{
+                alert('indtast venligst en gyldig email')
+            }
+        }
+        
+    </script>
+</body>
+</html>
