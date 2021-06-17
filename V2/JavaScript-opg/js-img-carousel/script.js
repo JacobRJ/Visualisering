@@ -15,7 +15,6 @@ document.querySelector('.next').addEventListener('click', function(){
 for (i of dots){
     i.addEventListener('click', function(e){
         showSlides(slideIndex = e.target.id)
-        timer = setTimeout(autoSlideChange, 3000)
     })
 }
 
@@ -25,11 +24,11 @@ function autoSlideChange(){
 
 function changeSlide(n){
     showSlides(slideIndex += n)
-    timer = setTimeout(autoSlideChange, 3000)
 }
 
 function showSlides(n){
     clearTimeout(timer)
+    
     let slides = document.querySelectorAll('.slides')
     let dots = document.querySelectorAll('.dot')
 
@@ -46,4 +45,6 @@ function showSlides(n){
 
     slides[slideIndex-1].style.display = "block"
     dots[slideIndex-1].className += " active"
+
+    timer = setTimeout(autoSlideChange, 3000)
 }
