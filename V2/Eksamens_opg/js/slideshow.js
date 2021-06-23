@@ -6,6 +6,7 @@ let timer
 let slides = document.querySelectorAll('.slides')
 let dotContainer = document.querySelector('.dotContainer')
 
+// creates dots acording to the amount of slides
 let id = 0
 for (let i of slides){    
     let dot = document.createElement('div')
@@ -17,22 +18,25 @@ for (let i of slides){
 
 let dots = document.querySelectorAll('.dot')
 
-changeSlide(1) // changes the slide by 1
-
-document.querySelector('.prev').addEventListener('click', function(){
-    changeSlide(-1) // changes the slide by -1
-})
-
-document.querySelector('.next').addEventListener('click', function(){
-    changeSlide(1) // changes the slide by 1
-})
-
+// adds click eventhandler to all dots
 for (let i of dots){
     i.addEventListener('click', function(e){
         // changes slide to the coresponding dot pressed
         showSlides(slideIndex = e.target.id)
     })
 }
+
+changeSlide(1) // changes the slide by 1
+
+// event handler for back button
+document.querySelector('.prev').addEventListener('click', function(){
+    changeSlide(-1) // changes the slide by -1
+})
+
+// event handler for next button
+document.querySelector('.next').addEventListener('click', function(){
+    changeSlide(1) // changes the slide by 1
+})
 
 function autoSlideChange(){
     changeSlide(1) // changes the slide by 1

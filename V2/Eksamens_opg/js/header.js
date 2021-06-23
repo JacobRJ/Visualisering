@@ -1,5 +1,12 @@
 "use strict"
 
+const menu = {
+    "Forside": 'index.html',
+    "om nike pro shop": 'about.html',
+    "historien om nike": 'history.html',
+    "Kontakt": 'contact.html'
+}
+
 let headerA = document.createElement('a')
 headerA.href = 'index.html'
 
@@ -11,16 +18,8 @@ let headerH1 = document.createElement('h1')
 let headerH1txt = document.createTextNode('Nike Pro Shop')
 headerH1.appendChild(headerH1txt)
 
-
 headerA.appendChild(headerImg)
 headerA.appendChild(headerH1)
-
-const menu = {
-    "Forside": 'index.html',
-    "om nike pro shop": 'about.html',
-    "historien om nike": 'history.html',
-    "Kontakt": 'contact.html'
-}
 
 let nav = document.createElement('nav')
 let ul = document.createElement('ul')
