@@ -51,8 +51,6 @@ function showSlides(n){
     // clears the timer to make sure it dosent repeat too soon
     clearTimeout(timer)
 
-    // check if n is a valid slide number and if not change it to one that is
-    // this also makes the carousel loop
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
 
@@ -66,10 +64,10 @@ function showSlides(n){
         dots[i].className = dots[i].className.replace(" active", "")
     }
 
-    // shows the current slide and acctivates the dot asosiated with that slide
+    // shows the current slide and activates the dot asosiated with that slide
     slides[slideIndex-1].style.display = "block"
     dots[slideIndex-1].className += " active"
 
-    // starts a timer to change the slide in 3 sec
+    // starts a timer to change the slide in 3 seconds
     timer = setTimeout(autoSlideChange, 3000)
 }
