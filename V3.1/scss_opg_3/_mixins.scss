@@ -1,0 +1,21 @@
+@mixin button_normal($color-txt, $color-bg, $color-bdr) {
+	display: inline-block;
+	padding: 4px 16px 2px 16px;	
+	border-radius: 8px;
+	font-size: .9em;
+	border: 1px solid $color-bdr;
+	text-decoration: none;
+	background-color: $color-bg;
+    color: $color-txt;
+    &::after{
+        content: '\25BA';
+        padding-left: 6px;
+        font-size: 0.8em;
+        opacity: 0.7;
+    }
+}
+
+@mixin button_hover($color-txt, $color-bg) {
+    color: $color-txt;
+    background-color: $color-bg;
+}
