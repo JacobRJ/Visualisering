@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Ubuntu&display=swap');
+@import "_mixins";
+
+$font-main: 'PT Sans Narrow', sans-serif;
+$font-headings: 'Ubuntu', sans-serif;
+$color-bg: hsl(40, 43%, 82%);
+$color-heading: hsl(220, 43%, 30%);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $font-main;
+    background-color: $color-bg;
+    padding: 1rem;
+}
+
+h1{
+    font-family: $font-headings;
+    color: $font-headings;
+    padding: 2rem;
+}
+
+.imagegrid{
+    
+    @media screen and (max-width: 600px) {
+        @include imagegrid(3, 1%);
+    }
+    @media screen and (min-width: 600px) {
+        @include imagegrid(7, 2%);
+    }
+    .item{
+        float: left;
+    }
+
+    img{
+        border-radius: 15px;
+        max-width: 100%;
+    }
+}
