@@ -1,5 +1,5 @@
 @mixin imagegrid($columns, $margin){
-    $itemwidth: calc((100% - #{$columns} * #{$margin})/#{$columns});
+    $itemwidth: calc((100% - (#{$columns} - 1) * #{$margin})/#{$columns});
     .item{
         width: $itemwidth;
         margin: 0 $margin $margin 0;
