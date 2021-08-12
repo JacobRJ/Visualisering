@@ -1,0 +1,58 @@
+@import '_mixins.scss';
+
+$blue: hsl(202, 74%, 64%);
+$total: 9;
+$screensize: 'small';
+$tempwidth: 0;
+
+@function fancyColor($darkenpercentage){
+    @return darken($blue, $darkenpercentage);
+}
+
+@function calculateWidth($columns, $margin){
+    $itemwidth: (100% - ($columns - 1) * $margin)/$columns;
+    @return $itemwidth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.kasser{
+    height: 100vh;
+}
+
+// @media screen and (min-width: 600px) and (max-width: 999px){
+//     $screensize: 'medium';
+// }
+
+// @media screen and (min-width: 1000px) {
+//     $screensize: 'large';
+// }
+
+@for $i from 1 through $total{
+    
+    .kasse-#{$i}{
+        float: left;
+
+        @media screen and (max-width: 599px) {
+            $tempwidth: calculateWidth(3, 3%);
+            @include imagegrid(3, 3%);
+            @include box(fancyColor($i * 5%), $tempwidth, $screensize);
+        }
+        @media screen and (min-width: 600px) and (max-width: 999px){
+            $screensize: 'medium';
+            $tempwidth: calculateWidth(4, 2%);
+            @include imagegrid(4, 2%);
+            @include box(fancyColor($i * 5%), $tempwidth, $screensize);
+        }
+        @media screen and (min-width: 1000px) {
+            $screensize: 'large';
+            $tempwidth: calculateWidth(5, 1%);
+            @include imagegrid(5, 1%);
+            @include box(fancyColor($i * 5), $tempwidth, $screensize);
+        }
+    }
+}
+

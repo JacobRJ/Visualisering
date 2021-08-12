@@ -1,0 +1,22 @@
+@mixin box($color-bg, $width, $screensize) {
+    background-color: $color-bg;
+    width: $width;
+    // height: $width;
+    @if $screensize == 'small' {
+        height: $width / 1.77;
+    }
+    @else if $screensize == 'medium'{
+        height: $width;
+    }
+    @else{
+        height: $width * 1.77;
+    }
+}
+
+@mixin imagegrid($columns, $margin) {
+        margin: 0 $margin $margin 0;
+
+        &:nth-child(#{$columns}n){
+            margin: 0 0 $margin 0;
+        }
+}
