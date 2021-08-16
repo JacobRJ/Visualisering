@@ -11,7 +11,7 @@ $tempwidth: 0;
 
 @function calculateWidth($columns, $margin){
     $itemwidth: (100% - ($columns - 1) * $margin)/$columns;
-    @return $itemwidth;
+    @return $itemwidth; 
 }
 
 *{
